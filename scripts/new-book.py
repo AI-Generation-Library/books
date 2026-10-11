@@ -5,12 +5,14 @@ import argparse
 from pathlib import Path
 import runpy
 
+from book_metadata import check_slug, validate_book, write_json
+
 ROOT = Path(__file__).resolve().parents[1]
 tools = runpy.run_path(str(Path(__file__).with_name("sync-book.py")))
 
 
 def create_book(root: Path, slug: str, title: str) -> None:
-    tools["registry"]["check_slug"](slug)
+    check_slug(slug)
     target = root / "content" / slug
     if target.exists():
         raise ValueError(f"Book directory already exists; no files changed: {target}")
@@ -32,8 +34,8 @@ def create_book(root: Path, slug: str, title: str) -> None:
     verification_body = verification_template.read_text(encoding="utf-8") if verification_template.is_file() else "아직 검증하지 않았습니다. 실행한 검사와 결과를 기록하세요.\n"
     verification.write_text(tools["frontmatter"]("검증 범위", "이 책에서 확인한 내용과 확인하지 않은 내용을 기록합니다.", meta, enableToc=True) + verification_body, encoding="utf-8")
     (target / "index.md").write_text(tools["book_home"](meta), encoding="utf-8")
-    tools["registry"]["write_json"](target / "book.json", meta)
-    tools["registry"]["generate"](root)
+    write_json(target / "book.json", meta)
+    validate_book(target)
 
 
 if __name__ == "__main__":

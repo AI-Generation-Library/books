@@ -1,14 +1,21 @@
+# Authoring scratch and Python/runtime outputs
+__pycache__/
+*.py[cod]
+.authoring-tmp/
+.pytest_cache/
+.venv/
+venv/
+*.db
+*.sqlite3
+*.log
+.DS_Store
+.openai/
+work/
+
+# Local artifacts left from the former site checkout
 node_modules/
 /dist/
 .quartz/
 .quartz-cache/
 .sites-runtime/
-*.log
-__pycache__/
-.DS_Store
-
-
-# Optional local Sites metadata is not part of this GitHub deployment.
-.openai/
-work/
-public/
+/public/
