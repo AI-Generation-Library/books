@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" role="img" aria-labelledby="title desc">
+  <title id="title">AI Generation Library</title>
+  <desc id="desc">민트색 열린 책과 연결된 세 개의 점</desc>
+  <rect x="1" y="1" width="78" height="78" rx="19" fill="#0b8066"/>
+  <path d="M17 28c8-2 15-1 23 3v30c-8-4-15-5-23-3V28Z" fill="#f0fbf6"/>
+  <path d="M63 28c-8-2-15-1-23 3v30c8-4 15-5 23-3V28Z" fill="#d6f3e7"/>
+  <path d="M40 32v28M23 39l10 2M23 46l10 2M47 41l10-2M47 48l10-2" fill="none" stroke="#90cdb7" stroke-width="2" stroke-linecap="round"/>
+  <path d="m29 20 11-8 11 8" fill="none" stroke="#d6f3e7" stroke-width="1.5"/>
+  <circle cx="29" cy="20" r="3.5" fill="#d6f3e7"/><circle cx="40" cy="12" r="3.5" fill="#fff"/><circle cx="51" cy="20" r="3.5" fill="#d6f3e7"/>
+</svg>

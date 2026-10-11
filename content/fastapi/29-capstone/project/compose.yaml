@@ -1,0 +1,13 @@
+services:
+  hub:
+    build: .
+    environment:
+      HUB_JWT_SECRET: ${HUB_JWT_SECRET:?Set HUB_JWT_SECRET before running compose}
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - hub-data:/app/data
+    init: true
+    stop_grace_period: 10s
+volumes:
+  hub-data:

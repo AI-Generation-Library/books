@@ -1,0 +1,14 @@
+node_modules/
+/dist/
+.quartz/
+.quartz-cache/
+.sites-runtime/
+*.log
+__pycache__/
+.DS_Store
+
+
+# Optional local Sites metadata is not part of this GitHub deployment.
+.openai/
+work/
+public/

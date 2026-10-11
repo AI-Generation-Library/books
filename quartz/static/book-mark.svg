@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" role="img" aria-labelledby="title desc">
+  <title id="title">FastAPI 완전 정복</title>
+  <desc id="desc">민트색 바탕의 펼친 책과 비동기 실행을 상징하는 번개</desc>
+  <rect x="1" y="1" width="78" height="78" rx="19" fill="#0b8066"/>
+  <rect x="1.5" y="1.5" width="77" height="77" rx="18.5" fill="none" stroke="#09654f" stroke-opacity=".24"/>
+  <path d="M16 23c9-2 16-1 24 4v33c-8-5-15-6-24-4V23Z" fill="#f0fbf6"/>
+  <path d="M64 23c-9-2-16-1-24 4v33c8-5 15-6 24-4V23Z" fill="#d6f3e7"/>
+  <path d="M40 28v31" stroke="#92d7bc" stroke-width="2"/>
+  <path d="m44 15-14 25h12l-4 21 18-29H44l5-17Z" fill="#0b8066" stroke="#0b8066" stroke-linejoin="round" stroke-width="1.3"/>
+  <path d="M21 33c3-.1 5 .1 8 1M21 40c2.5-.1 4.5.2 7 .9M51 47c3-.8 5.5-1 8-.8" fill="none" stroke="#92d7bc" stroke-width="2" stroke-linecap="round"/>
+</svg>
