@@ -1,0 +1,54 @@
+[
+  {
+    "id": "DOC-FAQ",
+    "version": "2.0",
+    "status": "approved",
+    "disclosure": "public",
+    "read_scope": [
+      "support",
+      "public"
+    ],
+    "path": "documents/faq.md"
+  },
+  {
+    "id": "DOC-SUPPORT",
+    "version": "1.1",
+    "status": "approved",
+    "disclosure": "public",
+    "read_scope": [
+      "support",
+      "public"
+    ],
+    "path": "documents/support-policy.md"
+  },
+  {
+    "id": "DOC-RELEASE-OLD",
+    "version": "1.0",
+    "status": "archived",
+    "disclosure": "public",
+    "read_scope": [
+      "support"
+    ],
+    "path": "documents/release-archived.md"
+  },
+  {
+    "id": "DOC-SECURITY",
+    "version": "1.0",
+    "status": "approved",
+    "disclosure": "internal",
+    "read_scope": [
+      "support"
+    ],
+    "path": "documents/security-internal.md"
+  },
+  {
+    "id": "DOC-CONTRACT",
+    "version": "1.0",
+    "status": "approved",
+    "disclosure": "restricted",
+    "read_scope": [
+      "contract"
+    ],
+    "path": "documents/contract-restricted.md"
+  }
+]

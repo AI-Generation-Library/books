@@ -1,0 +1,13 @@
+{
+  "monthly_volume": 2400,
+  "eligible_rate": 0.8,
+  "adoption_rate": 0.75,
+  "before_minutes": 10,
+  "after_minutes": 6,
+  "hourly_value": 25000,
+  "setup_cash": 6000000,
+  "allocation_months": 12,
+  "recurring_cash": 900000,
+  "internal_operation_value": 500000,
+  "cash_realization_rate": 0.25
+}

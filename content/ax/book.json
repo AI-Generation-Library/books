@@ -1,0 +1,272 @@
+{
+  "id": "ax",
+  "title": "AX 완전 정복",
+  "description": "기업과 팀이 AI 전환을 기획하고 실제 업무에 정착시키는 과정을 다루는 실무서입니다. 조직의 준비도 진단과 과제 선정부터 업무 재설계, 데이터 정비, AI 시스템 구축, 품질·보안 관리, 성과 측정과 조직 확산까지 단계적으로 설명합니다. 가상 기업 사례와 워크시트로 AX 실행계획, 파일럿 기획서, 평가 기준과 운영 정책을 완성합니다.",
+  "status": "draft",
+  "tags": [
+    "AX",
+    "AI 전환",
+    "업무 혁신",
+    "AI 거버넌스",
+    "한국어"
+  ],
+  "provenance": {
+    "generator": "Codex · AI Generation Library book-generator (packaging)",
+    "provider": "external-manuscript",
+    "model": null,
+    "created": "2026-10-13",
+    "updated": "2026-10-13",
+    "source": "저자가 제공한 승인 목차와 원고. generation-input.json과 approved-plan.json에 작성 지시와 출처를 기록.",
+    "review": {
+      "status": "machine-checked",
+      "scope": [
+        "승인 목차 7부·30장과 파일·장 번호·파트 일치 검사",
+        "Markdown 코드 블록·내부 링크·다운로드 구조 검사",
+        "로컬 비용 계산·가상 평가 자료 구조 테스트 10개 실행 통과",
+        "공식 참고 페이지와 개인정보 보호법 제37조의2·인공지능기본법 제31조 확인"
+      ],
+      "notVerified": [
+        "전체 사람 편집·전문가 검수",
+        "실제 모델 답변 성능·안전성 평가",
+        "실제 기업 적용·업무 성과·현금 효과",
+        "개별 서비스 적법성·시행령 전체·분야별 의무"
+      ],
+      "verification": "appendices/verification"
+    }
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": "AX란 무엇인가",
+      "href": "01-chapter/chapter",
+      "part": 1
+    },
+    {
+      "number": 2,
+      "title": "업무에 필요한 AI 기술 지도",
+      "href": "02-chapter/chapter",
+      "part": 1
+    },
+    {
+      "number": 3,
+      "title": "AI의 능력과 한계",
+      "href": "03-chapter/chapter",
+      "part": 1
+    },
+    {
+      "number": 4,
+      "title": "개인 활용에서 조직 전환까지",
+      "href": "04-chapter/chapter",
+      "part": 1
+    },
+    {
+      "number": 5,
+      "title": "AX 준비도 진단",
+      "href": "05-chapter/chapter",
+      "part": 2
+    },
+    {
+      "number": 6,
+      "title": "해결할 문제 발견하기",
+      "href": "06-chapter/chapter",
+      "part": 2
+    },
+    {
+      "number": 7,
+      "title": "AI 적용 과제의 우선순위",
+      "href": "07-chapter/chapter",
+      "part": 2
+    },
+    {
+      "number": 8,
+      "title": "비용과 기대 효과 계산하기",
+      "href": "08-chapter/chapter",
+      "part": 2
+    },
+    {
+      "number": 9,
+      "title": "파일럿 기획서 작성하기",
+      "href": "09-chapter/chapter",
+      "part": 2
+    },
+    {
+      "number": 10,
+      "title": "기존 업무 흐름 분석과 재설계",
+      "href": "10-chapter/chapter",
+      "part": 3
+    },
+    {
+      "number": 11,
+      "title": "프롬프트와 업무 지시 설계",
+      "href": "11-chapter/chapter",
+      "part": 3
+    },
+    {
+      "number": 12,
+      "title": "고객 접점 업무의 AX",
+      "href": "12-chapter/chapter",
+      "part": 3
+    },
+    {
+      "number": 13,
+      "title": "관리·지원 업무의 AX",
+      "href": "13-chapter/chapter",
+      "part": 3
+    },
+    {
+      "number": 14,
+      "title": "개발과 지식 업무의 AX",
+      "href": "14-chapter/chapter",
+      "part": 3
+    },
+    {
+      "number": 15,
+      "title": "AI가 사용할 데이터 준비하기",
+      "href": "15-chapter/chapter",
+      "part": 4
+    },
+    {
+      "number": 16,
+      "title": "도입 방식 선택하기",
+      "href": "16-chapter/chapter",
+      "part": 4
+    },
+    {
+      "number": 17,
+      "title": "사내 자료를 활용하는 RAG",
+      "href": "17-chapter/chapter",
+      "part": 4
+    },
+    {
+      "number": 18,
+      "title": "AI 에이전트와 업무 자동화",
+      "href": "18-chapter/chapter",
+      "part": 4
+    },
+    {
+      "number": 19,
+      "title": "기존 업무 시스템과 연결하기",
+      "href": "19-chapter/chapter",
+      "part": 4
+    },
+    {
+      "number": 20,
+      "title": "AI 결과를 평가하는 방법",
+      "href": "20-chapter/chapter",
+      "part": 5
+    },
+    {
+      "number": 21,
+      "title": "AI 시스템 보안",
+      "href": "21-chapter/chapter",
+      "part": 5
+    },
+    {
+      "number": 22,
+      "title": "개인정보·저작권·공정성 점검",
+      "href": "22-chapter/chapter",
+      "part": 5
+    },
+    {
+      "number": 23,
+      "title": "조직의 AI 거버넌스 설계",
+      "href": "23-chapter/chapter",
+      "part": 5
+    },
+    {
+      "number": 24,
+      "title": "운영과 장애 대응",
+      "href": "24-chapter/chapter",
+      "part": 5
+    },
+    {
+      "number": 25,
+      "title": "역할별 AI 역량과 교육",
+      "href": "25-chapter/chapter",
+      "part": 6
+    },
+    {
+      "number": 26,
+      "title": "변화관리와 구성원 참여",
+      "href": "26-chapter/chapter",
+      "part": 6
+    },
+    {
+      "number": 27,
+      "title": "AX 성과 측정과 개선",
+      "href": "27-chapter/chapter",
+      "part": 6
+    },
+    {
+      "number": 28,
+      "title": "파일럿을 조직 전체로 확장하기",
+      "href": "28-chapter/chapter",
+      "part": 6
+    },
+    {
+      "number": 29,
+      "title": "통합 실습: 가상 기업의 AX 프로젝트",
+      "href": "29-chapter/chapter",
+      "part": 7
+    },
+    {
+      "number": 30,
+      "title": "90일 실행계획과 장기 로드맵",
+      "href": "30-chapter/chapter",
+      "part": 7
+    }
+  ],
+  "parts": [
+    {
+      "number": 1,
+      "title": "AX의 기본 이해",
+      "first": 1,
+      "last": 4
+    },
+    {
+      "number": 2,
+      "title": "우리 조직의 AX 전략 세우기",
+      "first": 5,
+      "last": 9
+    },
+    {
+      "number": 3,
+      "title": "AI를 활용한 업무 재설계",
+      "first": 10,
+      "last": 14
+    },
+    {
+      "number": 4,
+      "title": "데이터와 AI 시스템 구축",
+      "first": 15,
+      "last": 19
+    },
+    {
+      "number": 5,
+      "title": "품질·보안·거버넌스",
+      "first": 20,
+      "last": 24
+    },
+    {
+      "number": 6,
+      "title": "사람과 조직을 변화시키기",
+      "first": 25,
+      "last": 28
+    },
+    {
+      "number": 7,
+      "title": "통합 실습과 실행 로드맵",
+      "first": 29,
+      "last": 30
+    }
+  ],
+  "downloads": [
+    {
+      "title": "원고·워크시트 ZIP",
+      "href": "downloads/ax-book.zip",
+      "type": "원고·실습 자료"
+    }
+  ],
+  "subtitle": "AI 전환 전략부터 업무 재설계, 데이터·에이전트 구축, 조직 운영까지",
+  "practiceSummary": "13종 워크시트 · 가상 문서 5개 · 미실행 평가 사례 24개 · 로컬 비용 계산기"
+}
