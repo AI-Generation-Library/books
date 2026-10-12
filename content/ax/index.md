@@ -25,6 +25,10 @@ bookHome: true
 - [용어 정리](appendices/glossary)
 - [참고 자료와 확인 범위](appendices/references)
 
+## 다운로드
+
+[원고·워크시트·실습 자료 ZIP](downloads/ax-book.zip)
+
 ## 목차
 
 ### 1부. AX의 기본 이해
