@@ -65,6 +65,10 @@ python scripts/sync-book.py --source "../my-python-manuscript" --slug python-bas
 
 콘텐츠 PR 검사와 리뷰를 거쳐 `books/main`에 반영합니다. `library`는 별도 체크아웃한 이 저장소에서 `content/`와 검증 모듈을 읽고, 자신의 작업 공간에 복사한 콘텐츠로 목록·검색·진도용 manifest를 생성합니다. 생성된 웹 파일은 이 저장소에 커밋하지 않습니다. 저장소 역할과 연동은 [ARCHITECTURE.md](ARCHITECTURE.md)에 있습니다.
 
+`library`가 10분 간격으로 `books/main`과 공개 사이트의 원고 커밋을 비교합니다. 변경이 있으면 감지한 커밋의 콘텐츠·사이트·링크를 검사한 뒤 자동 배포하며, 이미 반영된 커밋이면 빌드를 건너뜁니다. PR 브랜치의 미병합 원고는 공개 사이트에 반영하지 않습니다. 별도 공유 비밀키를 설정할 필요가 없습니다.
+
+실제 반영 시점에는 GitHub 실행 대기와 빌드 시간이 더해집니다. 즉시 재빌드하려면 library의 [배포 워크플로](https://github.com/AI-Generation-Library/library/actions/workflows/deploy.yml)에서 **Run workflow**를 실행할 수 있습니다. 배포 실패 시 기존 서재가 유지되며, [운영 조건과 검사 기록](https://github.com/AI-Generation-Library/library#기여와-배포)은 library 안내에 있습니다.
+
 ## 출처와 라이선스
 
 각 책은 `book.json`에 생성 도구, 확인된 모델, 날짜, 입력 자료와 실제 검증 범위를 남깁니다. 확인할 수 없는 모델명은 `null`로 기록합니다. 실행 환경과 확인 범위는 해당 책의 검증 안내를 참고하세요.
