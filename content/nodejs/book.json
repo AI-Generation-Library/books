@@ -1,0 +1,319 @@
+{
+  "id": "nodejs",
+  "title": "Node.js 완전 정복",
+  "description": "Node.js의 기본 구조와 모듈 시스템, 이벤트 루프와 비동기 처리부터 HTTP·데이터베이스·인증·작업 큐·성능 분석·배포와 운영까지. 8부 36장과 실행 예제로 파일 처리 서비스를 완성하는 한국어 실습형 기술서.",
+  "status": "draft",
+  "tags": [
+    "Node.js",
+    "JavaScript",
+    "TypeScript",
+    "백엔드",
+    "비동기",
+    "한국어"
+  ],
+  "provenance": {
+    "generator": "Codex — 대화에서 직접 집필한 원고와 예제",
+    "model": null,
+    "created": "2026-10-14",
+    "updated": "2026-10-14",
+    "source": "사용자가 승인한 제목·설명·8부 36장 목차를 바탕으로 집필했다. 입력과 계획은 generation-input.json, 장별 공식 출처는 본문과 appendices/references.md에 기록했다. 외부 생성 API를 호출한 원고로 표시하지 않는다. 정확한 실행 모델 ID는 확인하지 못해 null이다.",
+    "review": {
+      "status": "automated-checked",
+      "scope": [
+        "Windows / Node.js 24.18.0 / npm 11.16.0에서 기본 테스트 22개 통과",
+        "독립 예제 10개·파일 복사 CLI 정상/실패·실제 메모리 모드 서버 smoke 실행",
+        "TypeScript 독립 예제 tsc 검사·Compose 구성 검사",
+        "localhost health endpoint 100건 closed-loop 실험 오류 0건",
+        "본문 JavaScript·예제 문법과 로컬 링크·책 메타데이터 검사"
+      ],
+      "notVerified": [
+        "전체 사람 검수와 모든 설명의 독립 전문가 검토",
+        "PostgreSQL·Redis/BullMQ 실제 서비스 통합 테스트",
+        "Docker 이미지 빌드·컨테이너 실행·볼륨 권한·Linux SIGTERM 종료",
+        "멀티파트 업로드·캐시 확장·WebSocket·메트릭/트레이스 수집기",
+        "실제 클라우드·TLS·다중 호스트·운영 부하·백업 복원·장애 주입"
+      ],
+      "verification": "appendices/verification"
+    }
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Node.js는 무엇이고 어떻게 동작하는가",
+      "href": "01-runtime/chapter",
+      "part": 1
+    },
+    {
+      "number": 2,
+      "title": "개발 환경과 첫 번째 프로그램",
+      "href": "02-environment/chapter",
+      "part": 1
+    },
+    {
+      "number": 3,
+      "title": "서버 개발에 필요한 JavaScript",
+      "href": "03-javascript/chapter",
+      "part": 1
+    },
+    {
+      "number": 4,
+      "title": "npm과 프로젝트의 기본 구조",
+      "href": "04-npm-project/chapter",
+      "part": 1
+    },
+    {
+      "number": 5,
+      "title": "모듈 시스템 제대로 이해하기",
+      "href": "05-modules/chapter",
+      "part": 1
+    },
+    {
+      "number": 6,
+      "title": "콜백에서 Promise와 async/await까지",
+      "href": "06-async/chapter",
+      "part": 2
+    },
+    {
+      "number": 7,
+      "title": "이벤트 루프의 내부 동작",
+      "href": "07-event-loop/chapter",
+      "part": 2
+    },
+    {
+      "number": 8,
+      "title": "파일 시스템과 프로세스 다루기",
+      "href": "08-filesystem/chapter",
+      "part": 2
+    },
+    {
+      "number": 9,
+      "title": "Buffer와 이벤트 기반 프로그래밍",
+      "href": "09-buffer-events/chapter",
+      "part": 2
+    },
+    {
+      "number": 10,
+      "title": "Stream과 백프레셔",
+      "href": "10-streams/chapter",
+      "part": 2
+    },
+    {
+      "number": 11,
+      "title": "내장 HTTP 모듈로 서버 만들기",
+      "href": "11-http/chapter",
+      "part": 3
+    },
+    {
+      "number": 12,
+      "title": "Express로 웹 애플리케이션 구성하기",
+      "href": "12-express/chapter",
+      "part": 3
+    },
+    {
+      "number": 13,
+      "title": "일관된 REST API 설계",
+      "href": "13-rest-api/chapter",
+      "part": 3
+    },
+    {
+      "number": 14,
+      "title": "TypeScript와 유지보수 가능한 프로젝트 구조",
+      "href": "14-typescript-architecture/chapter",
+      "part": 3
+    },
+    {
+      "number": 15,
+      "title": "테스트 가능한 서버 만들기",
+      "href": "15-testing/chapter",
+      "part": 3
+    },
+    {
+      "number": 16,
+      "title": "PostgreSQL과 데이터 모델링",
+      "href": "16-postgresql/chapter",
+      "part": 4
+    },
+    {
+      "number": 17,
+      "title": "트랜잭션과 데이터 동시성",
+      "href": "17-transactions/chapter",
+      "part": 4
+    },
+    {
+      "number": 18,
+      "title": "인증과 인가 구현하기",
+      "href": "18-authentication/chapter",
+      "part": 4
+    },
+    {
+      "number": 19,
+      "title": "웹 서비스의 보안 경계",
+      "href": "19-web-security/chapter",
+      "part": 4
+    },
+    {
+      "number": 20,
+      "title": "Redis와 캐싱 전략",
+      "href": "20-redis-cache/chapter",
+      "part": 4
+    },
+    {
+      "number": 21,
+      "title": "외부 API를 안정적으로 호출하기",
+      "href": "21-http-client/chapter",
+      "part": 5
+    },
+    {
+      "number": 22,
+      "title": "백그라운드 작업과 작업 큐",
+      "href": "22-job-queue/chapter",
+      "part": 5
+    },
+    {
+      "number": 23,
+      "title": "실시간 통신과 진행 상황 전달",
+      "href": "23-realtime/chapter",
+      "part": 5
+    },
+    {
+      "number": 24,
+      "title": "파일 업로드와 대용량 데이터 처리",
+      "href": "24-uploads/chapter",
+      "part": 5
+    },
+    {
+      "number": 25,
+      "title": "동시성과 병렬성: 스레드와 프로세스",
+      "href": "25-threads-processes/chapter",
+      "part": 6
+    },
+    {
+      "number": 26,
+      "title": "병목을 측정하고 개선하기",
+      "href": "26-performance/chapter",
+      "part": 6
+    },
+    {
+      "number": 27,
+      "title": "V8 메모리와 메모리 누수 분석",
+      "href": "27-memory/chapter",
+      "part": 6
+    },
+    {
+      "number": 28,
+      "title": "로그·메트릭·트레이스로 동작 관찰하기",
+      "href": "28-observability/chapter",
+      "part": 6
+    },
+    {
+      "number": 29,
+      "title": "실패에 견디는 애플리케이션",
+      "href": "29-resilience/chapter",
+      "part": 7
+    },
+    {
+      "number": 30,
+      "title": "Docker와 실행 환경 구성",
+      "href": "30-docker/chapter",
+      "part": 7
+    },
+    {
+      "number": 31,
+      "title": "CI/CD와 안전한 변경 배포",
+      "href": "31-cicd/chapter",
+      "part": 7
+    },
+    {
+      "number": 32,
+      "title": "여러 인스턴스로 확장하기",
+      "href": "32-scaling/chapter",
+      "part": 7
+    },
+    {
+      "number": 33,
+      "title": "요구사항과 아키텍처 설계",
+      "href": "33-capstone-design/chapter",
+      "part": 8
+    },
+    {
+      "number": 34,
+      "title": "인증과 데이터 관리 API 구현",
+      "href": "34-capstone-api/chapter",
+      "part": 8
+    },
+    {
+      "number": 35,
+      "title": "업로드·작업 큐·실시간 알림 연결",
+      "href": "35-capstone-worker/chapter",
+      "part": 8
+    },
+    {
+      "number": 36,
+      "title": "성능 검증부터 배포와 장애 대응까지",
+      "href": "36-capstone-validation/chapter",
+      "part": 8
+    }
+  ],
+  "parts": [
+    {
+      "number": 1,
+      "title": "Node.js의 기본 구조와 개발 환경",
+      "first": 1,
+      "last": 5
+    },
+    {
+      "number": 2,
+      "title": "비동기 처리와 핵심 내장 API",
+      "first": 6,
+      "last": 10
+    },
+    {
+      "number": 3,
+      "title": "HTTP 서버부터 실전 API까지",
+      "first": 11,
+      "last": 15
+    },
+    {
+      "number": 4,
+      "title": "데이터베이스와 인증·보안",
+      "first": 16,
+      "last": 20
+    },
+    {
+      "number": 5,
+      "title": "외부 연동과 서비스 기능 확장",
+      "first": 21,
+      "last": 24
+    },
+    {
+      "number": 6,
+      "title": "런타임 심화와 성능 분석",
+      "first": 25,
+      "last": 28
+    },
+    {
+      "number": 7,
+      "title": "배포와 안정적인 서비스 운영",
+      "first": 29,
+      "last": 32
+    },
+    {
+      "number": 8,
+      "title": "종합 프로젝트: 비동기 파일 처리 서비스",
+      "first": 33,
+      "last": 36
+    }
+  ],
+  "downloads": [
+    {
+      "title": "책 원고와 실행 예제 ZIP",
+      "href": "downloads/nodejs-book.zip",
+      "type": "zip"
+    },
+    {
+      "title": "실행 예제 ZIP",
+      "href": "downloads/nodejs-examples.zip",
+      "type": "zip"
+    }
+  ]
+}

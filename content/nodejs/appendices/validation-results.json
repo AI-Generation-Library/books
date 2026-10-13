@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-14",
+  "environment": {
+    "os": "Windows",
+    "node": "24.18.0",
+    "npm": "11.16.0",
+    "python": "3.12.12"
+  },
+  "tests": {
+    "passed": 22,
+    "failed": 0,
+    "skipped": 0,
+    "storage": "memory",
+    "transport": "real localhost HTTP"
+  },
+  "externalIntegration": {
+    "passed": 0,
+    "skipped": 1,
+    "reason": "PostgreSQL/Redis services not available; Docker engine could not start"
+  },
+  "typecheck": {
+    "passed": true,
+    "scope": "typescript/job-service.ts"
+  },
+  "compose": {
+    "configurationValidated": true,
+    "containersExecuted": false
+  },
+  "localBookChecks": {
+    "scripts": 33,
+    "javascriptBlocks": 25,
+    "markdownFiles": 48,
+    "localLinks": 263,
+    "errors": []
+  },
+  "officialReferences": {
+    "checked": 86,
+    "http200": 86
+  },
+  "localExecution": {
+    "01-runtime": {
+      "code": 0,
+      "stdout": "{\n  version: 'v24.18.0',\n  v8: '13.6.233.17-node.50',\n  uv: '1.52.1',\n  platform: 'win32'\n}\nundefined function",
+      "stderr": ""
+    },
+    "03-javascript": {
+      "code": 0,
+      "stdout": "1 2\n[ 'B' ]\nSyntaxError",
+      "stderr": ""
+    },
+    "05-modules": {
+      "code": 0,
+      "stdout": "5\nfile:",
+      "stderr": ""
+    },
+    "06-async": {
+      "code": 0,
+      "stdout": "[ 'A', 'B' ]\nexpected",
+      "stderr": ""
+    },
+    "07-event-loop": {
+      "code": 0,
+      "stdout": "sync\nmicrotask\npromise\nnextTick\nio:immediate\nio:timeout",
+      "stderr": ""
+    },
+    "08-files": {
+      "code": 0,
+      "stdout": "안녕 Node.js",
+      "stderr": ""
+    },
+    "09-buffer-events": {
+      "code": 0,
+      "stdout": "2 6\nfirst",
+      "stderr": ""
+    },
+    "11-http": {
+      "code": 0,
+      "stdout": "200 { message: '안녕' }",
+      "stderr": ""
+    },
+    "25-parallel": {
+      "code": 0,
+      "stdout": "6765",
+      "stderr": ""
+    },
+    "26-performance": {
+      "code": 0,
+      "stdout": "{\n  p99Ms: 56.590335,\n  memory: {\n    rss: 43978752,\n    heapTotal: 8101888,\n    heapUsed: 4885848,\n    external: 1681208,\n    arrayBuffers: 137503\n  }\n}",
+      "stderr": ""
+    },
+    "copy-cli": "copy and existing-file rejection passed",
+    "smoke": {
+      "code": 0,
+      "stdout": "{\"smoke\":\"passed\",\"result\":{\"bytes\":11,\"characters\":7,\"lines\":2}}",
+      "stderr": ""
+    },
+    "load": {
+      "code": 0,
+      "stdout": "{\n  \"model\": \"closed-loop\",\n  \"total\": 100,\n  \"concurrency\": 4,\n  \"errors\": 0,\n  \"elapsedMs\": 117.09,\n  \"requestsPerSecond\": 854.02,\n  \"p50Ms\": 2.02,\n  \"p95Ms\": 8.94,\n  \"p99Ms\": 17.49\n}",
+      "stderr": ""
+    }
+  },
+  "humanReview": false
+}
