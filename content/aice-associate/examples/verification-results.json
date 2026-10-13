@@ -1,0 +1,174 @@
+{
+  "date": "2026-10-13",
+  "chapter_python_blocks": 27,
+  "mock_solution_scripts": 2,
+  "unit_tests": 8,
+  "notebook_schemas": 11,
+  "executed_notebooks": [
+    {
+      "notebook": "part-01.ipynb",
+      "executed_code_cells": 3,
+      "status": "passed"
+    },
+    {
+      "notebook": "part-02.ipynb",
+      "executed_code_cells": 6,
+      "status": "passed"
+    },
+    {
+      "notebook": "part-03.ipynb",
+      "executed_code_cells": 7,
+      "status": "passed"
+    },
+    {
+      "notebook": "part-04.ipynb",
+      "executed_code_cells": 7,
+      "status": "passed"
+    },
+    {
+      "notebook": "part-05.ipynb",
+      "executed_code_cells": 5,
+      "status": "passed"
+    },
+    {
+      "notebook": "part-06.ipynb",
+      "executed_code_cells": 4,
+      "status": "passed"
+    },
+    {
+      "notebook": "part-07.ipynb",
+      "executed_code_cells": 2,
+      "status": "passed"
+    },
+    {
+      "notebook": "mock-01-solutions.ipynb",
+      "executed_code_cells": 15,
+      "status": "passed"
+    },
+    {
+      "notebook": "mock-02-solutions.ipynb",
+      "executed_code_cells": 15,
+      "status": "passed"
+    }
+  ],
+  "chapter_runs": [
+    {
+      "path": "03-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "04-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "05-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "06-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "07-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "08-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "09-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "10-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "11-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "12-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "13-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "14-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "15-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "16-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "17-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "18-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "19-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "20-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "21-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "22-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "23-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "24-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "25-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "26-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "27-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "28-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "29-chapter/chapter.md",
+      "status": "passed"
+    },
+    {
+      "path": "examples/mock-01-solution.py",
+      "status": "passed"
+    },
+    {
+      "path": "examples/mock-02-solution.py",
+      "status": "passed"
+    }
+  ],
+  "exam_server": "not-tested",
+  "human_review": "not-completed"
+}
