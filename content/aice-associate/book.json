@@ -1,0 +1,278 @@
+{
+  "id": "aice-associate",
+  "title": "AICE Associate 완전 정복",
+  "description": "AICE Associate를 준비하는 수험생을 위한 실습 중심 학습서입니다. Python·pandas부터 데이터 탐색과 전처리, 머신러닝·딥러닝 학습 및 평가까지 단계적으로 익힙니다. 실행 가능한 코드와 연습문제, 분류·회귀 통합 실습 및 자체 제작 모의고사로 전체 분석 과정을 연습합니다.",
+  "status": "draft",
+  "tags": [
+    "AICE Associate",
+    "Python",
+    "데이터 분석",
+    "머신러닝",
+    "한국어"
+  ],
+  "provenance": {
+    "generator": "Codex · AI Generation Library book-generator (packaging)",
+    "provider": "external-manuscript",
+    "model": null,
+    "created": "2026-10-13",
+    "updated": "2026-10-13",
+    "source": "저자가 제공한 승인 목차와 원고. generation-input.json과 approved-plan.json에 작성 지시와 출처를 기록.",
+    "review": {
+      "status": "machine-checked",
+      "scope": [
+        "승인 목차 7부·30장·장 번호·파트 대조 및 내부 링크·ZIP 검사",
+        "본문 Python 예제 27개·모의고사 해설 스크립트 2개 실제 실행",
+        "노트북 11개 스키마 검사·완성 예제와 해설 노트북 9개 실제 실행",
+        "행 대응·분할·훈련 통계·새 범주·누락 열 등 테스트 8개 통과",
+        "공식 Associate 안내·수험자 가이드 지정 부분·라이브러리 API 확인"
+      ],
+      "notVerified": [
+        "전체 사람 편집·공식 기관 검수",
+        "실제 시험 서버·감독·채점 환경",
+        "실제 합격률·성적·기업 데이터 성능",
+        "다른 OS·Colab·GPU와 모든 코드 분기"
+      ],
+      "verification": "appendices/verification"
+    }
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": "AICE Associate 시험 이해하기",
+      "href": "01-chapter/chapter",
+      "part": 1
+    },
+    {
+      "number": 2,
+      "title": "나에게 맞는 학습계획 세우기",
+      "href": "02-chapter/chapter",
+      "part": 1
+    },
+    {
+      "number": 3,
+      "title": "실습에 필요한 Python과 NumPy",
+      "href": "03-chapter/chapter",
+      "part": 1
+    },
+    {
+      "number": 4,
+      "title": "Jupyter 실습 환경 익히기",
+      "href": "04-chapter/chapter",
+      "part": 1
+    },
+    {
+      "number": 5,
+      "title": "pandas로 데이터 불러오고 선택하기",
+      "href": "05-chapter/chapter",
+      "part": 2
+    },
+    {
+      "number": 6,
+      "title": "데이터 집계와 결합하기",
+      "href": "06-chapter/chapter",
+      "part": 2
+    },
+    {
+      "number": 7,
+      "title": "데이터 구성과 품질 점검하기",
+      "href": "07-chapter/chapter",
+      "part": 2
+    },
+    {
+      "number": 8,
+      "title": "시각화로 데이터 특성 파악하기",
+      "href": "08-chapter/chapter",
+      "part": 2
+    },
+    {
+      "number": 9,
+      "title": "상관관계와 타깃 분석하기",
+      "href": "09-chapter/chapter",
+      "part": 2
+    },
+    {
+      "number": 10,
+      "title": "결측치 처리하기",
+      "href": "10-chapter/chapter",
+      "part": 3
+    },
+    {
+      "number": 11,
+      "title": "이상치와 잘못된 데이터 처리하기",
+      "href": "11-chapter/chapter",
+      "part": 3
+    },
+    {
+      "number": 12,
+      "title": "범주형 변수 인코딩하기",
+      "href": "12-chapter/chapter",
+      "part": 3
+    },
+    {
+      "number": 13,
+      "title": "훈련·검증·테스트 데이터 나누기",
+      "href": "13-chapter/chapter",
+      "part": 3
+    },
+    {
+      "number": 14,
+      "title": "스케일링과 데이터 누수 방지하기",
+      "href": "14-chapter/chapter",
+      "part": 3
+    },
+    {
+      "number": 15,
+      "title": "전처리 흐름 완성하기",
+      "href": "15-chapter/chapter",
+      "part": 3
+    },
+    {
+      "number": 16,
+      "title": "머신러닝 학습의 기본 흐름",
+      "href": "16-chapter/chapter",
+      "part": 4
+    },
+    {
+      "number": 17,
+      "title": "분류 모델 만들기",
+      "href": "17-chapter/chapter",
+      "part": 4
+    },
+    {
+      "number": 18,
+      "title": "회귀 모델 만들기",
+      "href": "18-chapter/chapter",
+      "part": 4
+    },
+    {
+      "number": 19,
+      "title": "앙상블 모델 활용하기",
+      "href": "19-chapter/chapter",
+      "part": 4
+    },
+    {
+      "number": 20,
+      "title": "과적합을 확인하고 성능 개선하기",
+      "href": "20-chapter/chapter",
+      "part": 4
+    },
+    {
+      "number": 21,
+      "title": "모델 성능을 정확히 평가하기",
+      "href": "21-chapter/chapter",
+      "part": 4
+    },
+    {
+      "number": 22,
+      "title": "TensorFlow·Keras 시작하기",
+      "href": "22-chapter/chapter",
+      "part": 5
+    },
+    {
+      "number": 23,
+      "title": "딥러닝 분류 모델 만들기",
+      "href": "23-chapter/chapter",
+      "part": 5
+    },
+    {
+      "number": 24,
+      "title": "딥러닝 회귀 모델 만들기",
+      "href": "24-chapter/chapter",
+      "part": 5
+    },
+    {
+      "number": 25,
+      "title": "학습 곡선과 성능 개선하기",
+      "href": "25-chapter/chapter",
+      "part": 5
+    },
+    {
+      "number": 26,
+      "title": "분류 실습: 고객 이탈 예측",
+      "href": "26-chapter/chapter",
+      "part": 6
+    },
+    {
+      "number": 27,
+      "title": "회귀 실습: 서비스 이용량 예측",
+      "href": "27-chapter/chapter",
+      "part": 6
+    },
+    {
+      "number": 28,
+      "title": "문제의 요구사항을 코드로 옮기기",
+      "href": "28-chapter/chapter",
+      "part": 6
+    },
+    {
+      "number": 29,
+      "title": "실수 점검과 제한 시간 운영",
+      "href": "29-chapter/chapter",
+      "part": 7
+    },
+    {
+      "number": 30,
+      "title": "자체 제작 실전 모의고사 2회",
+      "href": "30-chapter/chapter",
+      "part": 7
+    }
+  ],
+  "parts": [
+    {
+      "number": 1,
+      "title": "시험 이해와 학습 준비",
+      "first": 1,
+      "last": 4
+    },
+    {
+      "number": 2,
+      "title": "데이터 분석과 탐색",
+      "first": 5,
+      "last": 9
+    },
+    {
+      "number": 3,
+      "title": "데이터 전처리",
+      "first": 10,
+      "last": 15
+    },
+    {
+      "number": 4,
+      "title": "머신러닝 모델링과 평가",
+      "first": 16,
+      "last": 21
+    },
+    {
+      "number": 5,
+      "title": "딥러닝 모델링과 평가",
+      "first": 22,
+      "last": 25
+    },
+    {
+      "number": 6,
+      "title": "처음부터 끝까지 통합 실습",
+      "first": 26,
+      "last": 28
+    },
+    {
+      "number": 7,
+      "title": "시험 대비와 모의고사",
+      "first": 29,
+      "last": 30
+    }
+  ],
+  "downloads": [
+    {
+      "title": "원고 ZIP 받기",
+      "href": "downloads/aice-associate-book.zip",
+      "type": "원고·실습"
+    },
+    {
+      "title": "실습 코드·노트북 받기",
+      "href": "downloads/aice-associate-exercises.zip",
+      "type": "실습 코드"
+    }
+  ],
+  "subtitle": "파이썬 기초부터 데이터 분석·전처리, 머신러닝·딥러닝, 실전 모의고사까지",
+  "practiceSummary": "장 예제 27개 · 노트북 11개 · 자체 제작 모의고사 2회·28문항"
+}

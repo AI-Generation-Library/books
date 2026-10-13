@@ -1,0 +1,238 @@
+[
+  {
+    "number": 1,
+    "title": "자체 제작 모의고사 1회",
+    "questions": [
+      {
+        "number": 1,
+        "title": "자료 불러오기",
+        "prompt": "data/customers.csv를 df에 읽고 첫 3행을 표시한다.",
+        "points": 6,
+        "code": "import numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom lab import ROOT\ndf = pd.read_csv(ROOT / 'data/customers.csv')\nassert df.shape == (600,8)\nprint(df.head(3))",
+        "explanation": "파일과 변수명을 맞추고 인덱스용 열이 추가되지 않았는지 본다."
+      },
+      {
+        "number": 2,
+        "title": "구조 확인",
+        "prompt": "행·열 수를 shape_result에, 자료형을 dtype_result에 저장한다.",
+        "points": 6,
+        "code": "shape_result = df.shape\ndtype_result = df.dtypes\nassert shape_result == (600,8)\nprint(shape_result, dtype_result)",
+        "explanation": "shape는 속성이다. 자료형과 각 열의 의미를 구분한다."
+      },
+      {
+        "number": 3,
+        "title": "결측 확인",
+        "prompt": "열별 결측 수를 missing_counts에 저장하고 내림차순으로 표시한다.",
+        "points": 6,
+        "code": "missing_counts = df.isna().sum().sort_values(ascending=False)\nassert missing_counts['monthly_fee'] == 30\nassert missing_counts['contract_type'] == 18\nprint(missing_counts)",
+        "explanation": "범위 위반 정리 전 원자료의 결측을 계산한다."
+      },
+      {
+        "number": 4,
+        "title": "조건 선택",
+        "prompt": "tenure_months가 12 이상인 행에서 customer_id·monthly_fee·churn을 selected에 저장한다.",
+        "points": 6,
+        "code": "selected = df.loc[df['tenure_months'] >= 12,['customer_id','monthly_fee','churn']]\nassert list(selected.columns) == ['customer_id','monthly_fee','churn']\nassert len(selected) == int((df['tenure_months']>=12).sum())\nprint(selected.head())",
+        "explanation": "12개월 경계값을 포함하며 행과 열을 함께 선택한다."
+      },
+      {
+        "number": 5,
+        "title": "그룹 집계",
+        "prompt": "결측 계약 유형도 포함해 고객 수와 이탈 비율을 contract_summary에 저장한다.",
+        "points": 6,
+        "code": "contract_summary = df.groupby('contract_type',dropna=False).agg(\n    customer_count=('customer_id','size'),churn_rate=('churn','mean'))\nassert contract_summary['customer_count'].sum() == len(df)\nprint(contract_summary)",
+        "explanation": "size는 그룹 행 수이며 0·1 평균은 해당 표본의 이탈 비율이다."
+      },
+      {
+        "number": 6,
+        "title": "정의 위반 정리",
+        "prompt": "df 복사본 cleaned에서 음수 monthly_fee와 0~100 밖 last_usage를 결측으로 바꾼다. 큰 양수 요금은 유지한다.",
+        "points": 6,
+        "code": "cleaned = df.copy()\ncleaned.loc[cleaned['monthly_fee']<0,'monthly_fee'] = np.nan\ncleaned.loc[~cleaned['last_usage'].between(0,100),'last_usage'] = np.nan\nassert np.isnan(cleaned.loc[0,'monthly_fee'])\nassert np.isnan(cleaned.loc[1,'last_usage'])\nassert cleaned.loc[2,'monthly_fee'] == 10000 and df.loc[0,'monthly_fee'] == -10",
+        "explanation": "고정된 데이터 사전 조건과 통계적 극단값을 구분한다."
+      },
+      {
+        "number": 7,
+        "title": "입력·타깃",
+        "prompt": "숫자 특성 tenure_months·monthly_fee·support_calls·last_usage, 범주 contract_type·region만 X로 선택하고 churn을 y에 저장한다.",
+        "points": 6,
+        "code": "numeric_cols = ['tenure_months','monthly_fee','support_calls','last_usage']\ncategory_cols = ['contract_type','region']\nX, y = cleaned[numeric_cols+category_cols], cleaned['churn']\nassert X.shape == (600,6) and 'churn' not in X and 'customer_id' not in X",
+        "explanation": "ID·타깃을 입력에서 제외하고 순서를 보존한다."
+      },
+      {
+        "number": 8,
+        "title": "3분할",
+        "prompt": "훈련·검증·테스트 60·20·20 비율, 두 분할 random_state=42, stratify를 적용한다.",
+        "points": 6,
+        "code": "from sklearn.model_selection import train_test_split\nX_dev,X_test,y_dev,y_test = train_test_split(X,y,test_size=0.2,random_state=42,stratify=y)\nX_train,X_val,y_train,y_val = train_test_split(X_dev,y_dev,test_size=0.25,random_state=42,stratify=y_dev)\nassert (len(X_train),len(X_val),len(X_test)) == (360,120,120)\nassert set(X_train.index).isdisjoint(X_val.index) and set(X_train.index).isdisjoint(X_test.index)\nassert X_train.index.equals(y_train.index)",
+        "explanation": "두 번째 비율은 남은 자료 기준이다."
+      },
+      {
+        "number": 9,
+        "title": "숫자 변환",
+        "prompt": "numeric_prep에 중앙값 대체·StandardScaler를 연결하고 훈련에서만 fit한다. num_train·num_val·num_test를 만든다.",
+        "points": 6,
+        "code": "from sklearn.pipeline import Pipeline\nfrom sklearn.impute import SimpleImputer\nfrom sklearn.preprocessing import StandardScaler,OneHotEncoder\nnumeric_prep = Pipeline([('imputer',SimpleImputer(strategy='median')),('scaler',StandardScaler())])\nnum_train = numeric_prep.fit_transform(X_train[numeric_cols])\nnum_val = numeric_prep.transform(X_val[numeric_cols])\nnum_test = numeric_prep.transform(X_test[numeric_cols])\nassert np.allclose(num_train.mean(axis=0),0,atol=1e-6)\nassert np.isfinite(num_val).all()",
+        "explanation": "평가 집합에서는 transform만 사용한다."
+      },
+      {
+        "number": 10,
+        "title": "범주 변환",
+        "prompt": "최빈값 대체·새 범주 ignore·dense 원핫을 category_prep에 연결한다. 숫자와 합쳐 train_data·val_data·test_data를 만든다.",
+        "points": 6,
+        "code": "category_prep = Pipeline([('imputer',SimpleImputer(strategy='most_frequent')),\n    ('encoder',OneHotEncoder(handle_unknown='ignore',sparse_output=False))])\ncat_train = category_prep.fit_transform(X_train[category_cols])\ncat_val = category_prep.transform(X_val[category_cols])\ncat_test = category_prep.transform(X_test[category_cols])\ntrain_data = np.column_stack([num_train,cat_train]).astype('float32')\nval_data = np.column_stack([num_val,cat_val]).astype('float32')\ntest_data = np.column_stack([num_test,cat_test]).astype('float32')\nassert train_data.shape == (360,9) and val_data.shape == test_data.shape == (120,9)",
+        "explanation": "열의 수·순서가 모든 집합에서 동일해야 한다."
+      },
+      {
+        "number": 11,
+        "title": "머신러닝 분류",
+        "prompt": "LogisticRegression(max_iter=1000)을 clf로 학습하고 검증 클래스 pred와 클래스 1 확률 prob를 만든다.",
+        "points": 10,
+        "code": "from sklearn.linear_model import LogisticRegression\nclf = LogisticRegression(max_iter=1000).fit(train_data,y_train)\npred = clf.predict(val_data)\nprob = clf.predict_proba(val_data)[:,list(clf.classes_).index(1)]\nassert len(pred) == len(prob) == 120 and clf.get_params()['max_iter'] == 1000",
+        "explanation": "predict와 predict_proba를 구분하고 classes_ 순서를 확인한다."
+      },
+      {
+        "number": 12,
+        "title": "지표",
+        "prompt": "검증 정확도 accuracy·F1 f1·ROC AUC auc와 [0,1] 순서 혼동행렬 cm을 저장한다.",
+        "points": 10,
+        "code": "from sklearn.metrics import accuracy_score,f1_score,roc_auc_score,confusion_matrix\naccuracy = accuracy_score(y_val,pred)\nf1 = f1_score(y_val,pred,zero_division=0)\nauc = roc_auc_score(y_val,prob)\ncm = confusion_matrix(y_val,pred,labels=[0,1])\nassert cm.sum() == 120 and all(0<=v<=1 for v in (accuracy,f1,auc))\nprint(accuracy,f1,auc,cm)",
+        "explanation": "AUC에 확률을 제공하고 지표를 같은 자료에서 계산한다."
+      },
+      {
+        "number": 13,
+        "title": "딥러닝 분류",
+        "prompt": "Input→Dense(16,relu)→Dense(1,sigmoid), Adam(0.01), binary_crossentropy로 model을 만들고 4 epoch·배치 32로 학습한다. 검증을 제공한다.",
+        "points": 10,
+        "code": "import tensorflow as tf\nfrom lab import dataset\ntf.keras.backend.clear_session()\ntf.keras.utils.set_random_seed(42)\nmodel = tf.keras.Sequential([tf.keras.layers.Input(shape=(train_data.shape[1],)),\n    tf.keras.layers.Dense(16,activation='relu'),tf.keras.layers.Dense(1,activation='sigmoid')])\nmodel.compile(optimizer=tf.keras.optimizers.Adam(0.01),loss='binary_crossentropy',metrics=['accuracy'])\nhistory = model.fit(dataset(train_data,y_train.to_numpy(dtype='float32'),True),\n    validation_data=dataset(val_data,y_val.to_numpy(dtype='float32')),epochs=4,verbose=0)\nassert model.output_shape[-1] == 1 and len(history.history['loss']) == 4",
+        "explanation": "이진 출력·손실을 맞춘다. 작은 epoch 수는 실행 연습 설정이다."
+      },
+      {
+        "number": 14,
+        "title": "딥러닝 평가·그림",
+        "prompt": "검증 확률을 0.5 기준 클래스로 바꿔 dl_f1을 계산하고 훈련·검증 손실을 범례와 함께 그린다.",
+        "points": 10,
+        "code": "from lab import dense_predict\ndl_prob = dense_predict(model,val_data)\ndl_pred = (dl_prob>=0.5).astype(int)\ndl_f1 = f1_score(y_val,dl_pred,zero_division=0)\nassert dl_pred.shape == (120,) and 0<=dl_f1<=1\nplt.plot(history.history['loss'],label='train')\nplt.plot(history.history['val_loss'],label='validation')\nplt.xlabel('Epoch index'); plt.ylabel('Loss'); plt.legend(); plt.show(); plt.close('all')\nprint('Validation DL F1:',dl_f1)",
+        "explanation": "확률을 라벨로 바꾸고 두 손실 곡선을 표시한다. 테스트는 선택에 사용하지 않는다."
+      }
+    ]
+  },
+  {
+    "number": 2,
+    "title": "자체 제작 모의고사 2회",
+    "questions": [
+      {
+        "number": 1,
+        "title": "자료 불러오기",
+        "prompt": "data/service_usage.csv를 df에 읽고 첫 3행을 표시한다.",
+        "points": 6,
+        "code": "import numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom lab import ROOT\ndf = pd.read_csv(ROOT / 'data/service_usage.csv')\nassert df.shape == (600,7)\nprint(df.head(3))",
+        "explanation": "타깃 usage_hours와 식별자 record_id를 확인한다."
+      },
+      {
+        "number": 2,
+        "title": "품질 확인",
+        "prompt": "열별 결측 수 missing_counts와 record_id 중복 수 duplicate_count를 저장한다.",
+        "points": 6,
+        "code": "missing_counts = df.isna().sum()\nduplicate_count = df['record_id'].duplicated().sum()\nassert missing_counts['storage_gb'] == 24 and duplicate_count == 0\nprint(missing_counts,duplicate_count)",
+        "explanation": "가상 관측은 한 행씩 독립이며 ID가 고유하다."
+      },
+      {
+        "number": 3,
+        "title": "집계",
+        "prompt": "plan별 행 수·usage_hours 평균을 plan_summary에 저장한다.",
+        "points": 6,
+        "code": "plan_summary = df.groupby('plan').agg(count=('record_id','size'),mean_hours=('usage_hours','mean'))\nassert plan_summary['count'].sum() == 600\nprint(plan_summary)",
+        "explanation": "탐색용 집계이며 타깃 평균을 모델 입력에 다시 붙이지 않는다."
+      },
+      {
+        "number": 4,
+        "title": "조건 선택",
+        "prompt": "active_days가 15 이상인 행의 record_id·active_days·usage_hours를 selected에 저장한다.",
+        "points": 6,
+        "code": "selected = df.loc[df['active_days']>=15,['record_id','active_days','usage_hours']]\nassert len(selected) == int((df['active_days']>=15).sum())\nprint(selected.head())",
+        "explanation": "이 문항의 선택 결과로 다음 모델 자료를 임의 축소하지 않는다."
+      },
+      {
+        "number": 5,
+        "title": "분포 그림",
+        "prompt": "전체 usage_hours의 히스토그램을 bins=15로 그리고 시간 단위 축 제목을 표시한다.",
+        "points": 6,
+        "code": "fig,ax = plt.subplots()\nax.hist(df['usage_hours'],bins=15)\nax.set_xlabel('Usage hours'); ax.set_ylabel('Count')\nassert len(ax.patches) == 15\nplt.show(); plt.close(fig)",
+        "explanation": "분포 탐색이며 모델을 고르기 위한 테스트 점수는 아니다."
+      },
+      {
+        "number": 6,
+        "title": "입력·타깃",
+        "prompt": "숫자 active_users·active_days·storage_gb, 범주 plan·region을 X에 선택하고 usage_hours를 y로 둔다.",
+        "points": 6,
+        "code": "numeric_cols = ['active_users','active_days','storage_gb']\ncategory_cols = ['plan','region']\nX,y = df[numeric_cols+category_cols],df['usage_hours']\nassert X.shape == (600,5) and 'usage_hours' not in X and 'record_id' not in X",
+        "explanation": "타깃과 ID를 입력에서 제외한다."
+      },
+      {
+        "number": 7,
+        "title": "분할",
+        "prompt": "훈련·검증·테스트 60·20·20, 두 단계 random_state=42로 나눈다. 연속 타깃에 stratify를 적용하지 않는다.",
+        "points": 6,
+        "code": "from sklearn.model_selection import train_test_split\nX_dev,X_test,y_dev,y_test = train_test_split(X,y,test_size=0.2,random_state=42)\nX_train,X_val,y_train,y_val = train_test_split(X_dev,y_dev,test_size=0.25,random_state=42)\nassert (len(X_train),len(X_val),len(X_test)) == (360,120,120)\nassert X_train.index.equals(y_train.index)",
+        "explanation": "이 자료는 독립 행이다. 실제 시계열의 시간 분할을 대체하지 않는다."
+      },
+      {
+        "number": 8,
+        "title": "숫자 결측 대체",
+        "prompt": "median_imputer를 훈련 숫자에만 학습하고 num_train·num_val·num_test를 만든다.",
+        "points": 6,
+        "code": "from sklearn.impute import SimpleImputer\nmedian_imputer = SimpleImputer(strategy='median')\nnum_train = median_imputer.fit_transform(X_train[numeric_cols])\nnum_val = median_imputer.transform(X_val[numeric_cols])\nnum_test = median_imputer.transform(X_test[numeric_cols])\nassert np.isfinite(num_train).all() and np.isfinite(num_test).all()",
+        "explanation": "평가 집합의 중앙값을 따로 계산하지 않는다."
+      },
+      {
+        "number": 9,
+        "title": "표준화",
+        "prompt": "scaler를 num_train에만 학습하고 세 숫자 배열을 같은 기준으로 변환한다.",
+        "points": 6,
+        "code": "from sklearn.preprocessing import StandardScaler,OneHotEncoder\nscaler = StandardScaler()\nnum_train = scaler.fit_transform(num_train)\nnum_val = scaler.transform(num_val)\nnum_test = scaler.transform(num_test)\nassert np.allclose(num_train.mean(axis=0),0,atol=1e-6)",
+        "explanation": "검증·테스트에서 fit하지 않는다."
+      },
+      {
+        "number": 10,
+        "title": "원핫·결합",
+        "prompt": "새 범주 ignore·dense OneHotEncoder를 훈련 범주에 학습한다. 숫자와 합쳐 train_data·val_data·test_data를 만든다.",
+        "points": 6,
+        "code": "encoder = OneHotEncoder(handle_unknown='ignore',sparse_output=False)\ncat_train = encoder.fit_transform(X_train[category_cols])\ncat_val = encoder.transform(X_val[category_cols])\ncat_test = encoder.transform(X_test[category_cols])\ntrain_data = np.column_stack([num_train,cat_train]).astype('float32')\nval_data = np.column_stack([num_val,cat_val]).astype('float32')\ntest_data = np.column_stack([num_test,cat_test]).astype('float32')\nassert train_data.shape == (360,8) and val_data.shape == test_data.shape == (120,8)",
+        "explanation": "이 가상 자료의 범주에는 결측이 없다. 일반 자료는 결측 정책이 필요하다."
+      },
+      {
+        "number": 11,
+        "title": "회귀 학습",
+        "prompt": "LinearRegression을 reg로 학습하고 검증 예측 pred를 만든다.",
+        "points": 10,
+        "code": "from sklearn.linear_model import LinearRegression\nreg = LinearRegression().fit(train_data,y_train)\npred = reg.predict(val_data)\nassert pred.shape == (120,)\nassert np.isfinite(pred).all()",
+        "explanation": "분류 라벨 대신 연속값을 예측한다."
+      },
+      {
+        "number": 12,
+        "title": "오차 평가",
+        "prompt": "검증 MAE mae·RMSE rmse·R² r2를 저장하고 잔차 actual−prediction을 residual에 저장한다.",
+        "points": 10,
+        "code": "from sklearn.metrics import mean_absolute_error,root_mean_squared_error,r2_score\nmae = mean_absolute_error(y_val,pred)\nrmse = root_mean_squared_error(y_val,pred)\nr2 = r2_score(y_val,pred)\nresidual = y_val.to_numpy()-pred\nassert residual.shape == (120,) and mae>=0 and rmse>=0\nprint(mae,rmse,r2)",
+        "explanation": "오차의 단위를 확인하고 R²를 0~1로 강제하지 않는다."
+      },
+      {
+        "number": 13,
+        "title": "딥러닝 회귀",
+        "prompt": "훈련 타깃 평균·표준편차로 타깃을 변환한다. Input→Dense(16,relu)→Dense(1,linear), Adam(0.01), mse로 4 epoch 학습한다.",
+        "points": 10,
+        "code": "import tensorflow as tf\nfrom lab import dataset\ntarget_mean,target_std = y_train.mean(),y_train.std(ddof=0)\nassert target_std>0\ntrain_y = ((y_train-target_mean)/target_std).to_numpy(dtype='float32')\nval_y = ((y_val-target_mean)/target_std).to_numpy(dtype='float32')\ntf.keras.backend.clear_session(); tf.keras.utils.set_random_seed(42)\nmodel = tf.keras.Sequential([tf.keras.layers.Input(shape=(train_data.shape[1],)),\n    tf.keras.layers.Dense(16,activation='relu'),tf.keras.layers.Dense(1,activation='linear')])\nmodel.compile(optimizer=tf.keras.optimizers.Adam(0.01),loss='mse')\nhistory = model.fit(dataset(train_data,train_y,True),validation_data=dataset(val_data,val_y),epochs=4,verbose=0)\nassert model.output_shape[-1]==1 and len(history.history['loss'])==4",
+        "explanation": "타깃의 통계도 훈련에서만 계산한다."
+      },
+      {
+        "number": 14,
+        "title": "역변환·그림",
+        "prompt": "검증 예측을 원래 시간 단위로 돌려 dl_pred·dl_rmse를 만들고 실제값 대 예측값 산점도를 그린다.",
+        "points": 10,
+        "code": "from lab import dense_predict\ndl_pred = dense_predict(model,val_data)*target_std+target_mean\ndl_rmse = root_mean_squared_error(y_val,dl_pred)\nassert dl_pred.shape==(120,) and np.isfinite(dl_pred).all() and dl_rmse>=0\nplt.scatter(y_val,dl_pred,alpha=0.5)\nplt.xlabel('Actual usage hours'); plt.ylabel('Predicted usage hours')\nplt.show(); plt.close('all')\nprint('Validation DL RMSE hours:',dl_rmse)",
+        "explanation": "표준화 손실을 시간 단위 오차로 해석하지 않고 역변환 후 평가한다."
+      }
+    ]
+  }
+]

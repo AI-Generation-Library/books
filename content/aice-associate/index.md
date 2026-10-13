@@ -1,0 +1,65 @@
+---
+title: "AICE Associate 완전 정복"
+description: "AICE Associate를 준비하는 수험생을 위한 실습 중심 학습서입니다. Python·pandas부터 데이터 탐색과 전처리, 머신러닝·딥러닝 학습 및 평가까지 단계적으로 익힙니다. 실행 가능한 코드와 연습문제, 분류·회귀 통합 실습 및 자체 제작 모의고사로 전체 분석 과정을 연습합니다."
+created: "2026-10-13"
+modified: "2026-10-13"
+enableToc: false
+bookHome: true
+---
+
+<nav class="book-library-return" aria-label="서재"><a href="../index"><span aria-hidden="true">←</span> AI Generation Library 서재</a></nav>
+
+<section class="book-hero"><p class="book-eyebrow">PYTHON · DATA ANALYSIS · EXAM PRACTICE</p><h1>AICE Associate<br><span>완전 정복</span></h1><p class="book-lead">데이터를 읽는 순간부터 모델의 결과를 설명하는 순간까지.<br>직접 실행하고, 틀린 이유를 찾고, 전체 흐름을 완성한다.</p><div class="book-actions"><a class="book-button book-button-primary" href="01-chapter/chapter">01장부터 시작하기 <span aria-hidden="true">↗</span></a><a class="book-button book-button-secondary" href="appendices/preface">학습·실습 안내</a></div><div class="book-metrics"><div><strong>07</strong><span>개의 파트</span></div><div><strong>30</strong><span>개의 챕터</span></div><div><strong>11</strong><span>개의 노트북</span></div><div><strong>02</strong><span>회의 자체 모의고사</span></div></div></section>
+<section class="book-progress-panel" aria-label="학습 진도"><div><p class="book-eyebrow">YOUR READING JOURNEY</p><strong data-book-progress-count>0 / 30장 완료</strong><p>마지막으로 읽던 곳부터 이어가세요.</p></div><progress data-book-progress max="30" value="0" aria-label="완료한 챕터 수">0 / 30</progress><a class="book-button book-button-secondary" data-book-resume href="01-chapter/chapter">이어서 읽기 →</a></section>
+<div class="book-note"><strong>이렇게 읽어요.</strong> 각 장은 개념 → 코드 실습 → 해석·실수 점검 → 연습과 해설로 이어집니다. 분류·회귀 통합 실습과 자체 제작 모의고사로 전체 흐름을 연습합니다. 진도는 이 브라우저에 저장됩니다.</div>
+
+<section class="book-parts" aria-label="전체 학습 목차">
+<section class="book-part"><header><span class="book-eyebrow">PART 01</span><h2>시험 이해와 학습 준비</h2><p>시험과 준비도를 확인하고 Python·노트북의 기초를 익힌다.</p></header><div class="book-chapters">
+<a class="book-chapter" data-book-chapter="1" href="01-chapter/chapter"><span class="chapter-number">01</span><span class="chapter-name">AICE Associate 시험 이해하기</span><span class="chapter-status" data-book-completed="1">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="2" href="02-chapter/chapter"><span class="chapter-number">02</span><span class="chapter-name">나에게 맞는 학습계획 세우기</span><span class="chapter-status" data-book-completed="2">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="3" href="03-chapter/chapter"><span class="chapter-number">03</span><span class="chapter-name">실습에 필요한 Python과 NumPy</span><span class="chapter-status" data-book-completed="3">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="4" href="04-chapter/chapter"><span class="chapter-number">04</span><span class="chapter-name">Jupyter 실습 환경 익히기</span><span class="chapter-status" data-book-completed="4">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+</div></section>
+<section class="book-part"><header><span class="book-eyebrow">PART 02</span><h2>데이터 분석과 탐색</h2><p>표를 읽고 선택·집계하며 자료의 품질과 관계를 살펴본다.</p></header><div class="book-chapters">
+<a class="book-chapter" data-book-chapter="5" href="05-chapter/chapter"><span class="chapter-number">05</span><span class="chapter-name">pandas로 데이터 불러오고 선택하기</span><span class="chapter-status" data-book-completed="5">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="6" href="06-chapter/chapter"><span class="chapter-number">06</span><span class="chapter-name">데이터 집계와 결합하기</span><span class="chapter-status" data-book-completed="6">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="7" href="07-chapter/chapter"><span class="chapter-number">07</span><span class="chapter-name">데이터 구성과 품질 점검하기</span><span class="chapter-status" data-book-completed="7">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="8" href="08-chapter/chapter"><span class="chapter-number">08</span><span class="chapter-name">시각화로 데이터 특성 파악하기</span><span class="chapter-status" data-book-completed="8">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="9" href="09-chapter/chapter"><span class="chapter-number">09</span><span class="chapter-name">상관관계와 타깃 분석하기</span><span class="chapter-status" data-book-completed="9">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+</div></section>
+<section class="book-part"><header><span class="book-eyebrow">PART 03</span><h2>데이터 전처리</h2><p>분할 후 훈련에서 변환을 학습하고 같은 기준을 적용한다.</p></header><div class="book-chapters">
+<a class="book-chapter" data-book-chapter="10" href="10-chapter/chapter"><span class="chapter-number">10</span><span class="chapter-name">결측치 처리하기</span><span class="chapter-status" data-book-completed="10">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="11" href="11-chapter/chapter"><span class="chapter-number">11</span><span class="chapter-name">이상치와 잘못된 데이터 처리하기</span><span class="chapter-status" data-book-completed="11">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="12" href="12-chapter/chapter"><span class="chapter-number">12</span><span class="chapter-name">범주형 변수 인코딩하기</span><span class="chapter-status" data-book-completed="12">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="13" href="13-chapter/chapter"><span class="chapter-number">13</span><span class="chapter-name">훈련·검증·테스트 데이터 나누기</span><span class="chapter-status" data-book-completed="13">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="14" href="14-chapter/chapter"><span class="chapter-number">14</span><span class="chapter-name">스케일링과 데이터 누수 방지하기</span><span class="chapter-status" data-book-completed="14">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="15" href="15-chapter/chapter"><span class="chapter-number">15</span><span class="chapter-name">전처리 흐름 완성하기</span><span class="chapter-status" data-book-completed="15">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+</div></section>
+<section class="book-part"><header><span class="book-eyebrow">PART 04</span><h2>머신러닝 모델링과 평가</h2><p>기준 모델부터 분류·회귀·앙상블과 성능 평가까지 연결한다.</p></header><div class="book-chapters">
+<a class="book-chapter" data-book-chapter="16" href="16-chapter/chapter"><span class="chapter-number">16</span><span class="chapter-name">머신러닝 학습의 기본 흐름</span><span class="chapter-status" data-book-completed="16">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="17" href="17-chapter/chapter"><span class="chapter-number">17</span><span class="chapter-name">분류 모델 만들기</span><span class="chapter-status" data-book-completed="17">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="18" href="18-chapter/chapter"><span class="chapter-number">18</span><span class="chapter-name">회귀 모델 만들기</span><span class="chapter-status" data-book-completed="18">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="19" href="19-chapter/chapter"><span class="chapter-number">19</span><span class="chapter-name">앙상블 모델 활용하기</span><span class="chapter-status" data-book-completed="19">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="20" href="20-chapter/chapter"><span class="chapter-number">20</span><span class="chapter-name">과적합을 확인하고 성능 개선하기</span><span class="chapter-status" data-book-completed="20">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="21" href="21-chapter/chapter"><span class="chapter-number">21</span><span class="chapter-name">모델 성능을 정확히 평가하기</span><span class="chapter-status" data-book-completed="21">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+</div></section>
+<section class="book-part"><header><span class="book-eyebrow">PART 05</span><h2>딥러닝 모델링과 평가</h2><p>입력·출력·손실을 맞추고 학습 곡선으로 검증한다.</p></header><div class="book-chapters">
+<a class="book-chapter" data-book-chapter="22" href="22-chapter/chapter"><span class="chapter-number">22</span><span class="chapter-name">TensorFlow·Keras 시작하기</span><span class="chapter-status" data-book-completed="22">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="23" href="23-chapter/chapter"><span class="chapter-number">23</span><span class="chapter-name">딥러닝 분류 모델 만들기</span><span class="chapter-status" data-book-completed="23">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="24" href="24-chapter/chapter"><span class="chapter-number">24</span><span class="chapter-name">딥러닝 회귀 모델 만들기</span><span class="chapter-status" data-book-completed="24">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="25" href="25-chapter/chapter"><span class="chapter-number">25</span><span class="chapter-name">학습 곡선과 성능 개선하기</span><span class="chapter-status" data-book-completed="25">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+</div></section>
+<section class="book-part"><header><span class="book-eyebrow">PART 06</span><h2>처음부터 끝까지 통합 실습</h2><p>고객 이탈과 서비스 이용량을 처음부터 끝까지 분석한다.</p></header><div class="book-chapters">
+<a class="book-chapter" data-book-chapter="26" href="26-chapter/chapter"><span class="chapter-number">26</span><span class="chapter-name">분류 실습: 고객 이탈 예측</span><span class="chapter-status" data-book-completed="26">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="27" href="27-chapter/chapter"><span class="chapter-number">27</span><span class="chapter-name">회귀 실습: 서비스 이용량 예측</span><span class="chapter-status" data-book-completed="27">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="28" href="28-chapter/chapter"><span class="chapter-number">28</span><span class="chapter-name">문제의 요구사항을 코드로 옮기기</span><span class="chapter-status" data-book-completed="28">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+</div></section>
+<section class="book-part"><header><span class="book-eyebrow">PART 07</span><h2>시험 대비와 모의고사</h2><p>요구조건·실수를 점검하고 90분 자체 모의고사로 연습한다.</p></header><div class="book-chapters">
+<a class="book-chapter" data-book-chapter="29" href="29-chapter/chapter"><span class="chapter-number">29</span><span class="chapter-name">실수 점검과 제한 시간 운영</span><span class="chapter-status" data-book-completed="29">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+<a class="book-chapter" data-book-chapter="30" href="30-chapter/chapter"><span class="chapter-number">30</span><span class="chapter-name">자체 제작 실전 모의고사 2회</span><span class="chapter-status" data-book-completed="30">읽기 전</span><span class="chapter-arrow" aria-hidden="true">↗</span></a>
+</div></section>
+</section>
+
+<section class="book-resources"><h2>함께 보는 학습 도구</h2><div class="book-actions"><a class="book-button book-button-secondary" href="appendices/study-plan">학습 체크리스트</a><a class="book-button book-button-secondary" href="appendices/code-reference">핵심 코드</a><a class="book-button book-button-secondary" href="appendices/metrics-losses">지표·손실 선택표</a><a class="book-button book-button-secondary" href="appendices/troubleshooting">오류 해결</a><a class="book-button book-button-secondary" href="examples/README">실습 자료</a><a class="book-button book-button-secondary" href="examples/mock-01-questions">1회 모의고사</a><a class="book-button book-button-secondary" href="examples/mock-02-questions">2회 모의고사</a><a class="book-button book-button-secondary" href="downloads/aice-associate-book.zip" download>원고 ZIP 받기</a><a class="book-button book-button-secondary" href="downloads/aice-associate-exercises.zip" download>실습 코드·노트북 받기</a></div></section>
+
+<section class="book-provenance" aria-labelledby="book-provenance-title"><p class="book-eyebrow">ABOUT THIS EDITION</p><h2 id="book-provenance-title">이 책의 작성과 실습</h2><p>승인된 목차를 바탕으로 작성한 한국어 학습서입니다. 실습 기준과 실행 기록, 참고 자료는 <a href="appendices/verification">검증 안내</a>에서 확인할 수 있습니다.</p><p><a href="https://github.com/AI-Generation-Library/books/tree/main/content/aice-associate">원고 보기</a> · <a href="https://github.com/AI-Generation-Library/books/blob/main/CONTRIBUTING.md">오류 수정에 기여하기</a></p></section>

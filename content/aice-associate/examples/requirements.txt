@@ -1,0 +1,11 @@
+numpy==1.26.4
+pandas==2.2.3
+scikit-learn==1.6.1
+matplotlib==3.10.1
+seaborn==0.13.2
+tensorflow==2.20.0
+keras==3.10.0
+protobuf==5.29.5
+nbformat==5.10.4
+nbclient==0.10.2
+ipykernel==6.29.5
