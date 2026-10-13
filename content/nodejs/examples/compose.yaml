@@ -1,0 +1,57 @@
+services:
+  postgres:
+    image: postgres:17.6-bookworm
+    environment:
+      POSTGRES_DB: nodebook
+      POSTGRES_USER: nodebook
+      POSTGRES_PASSWORD: local-only-change-me
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U nodebook -d nodebook]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+    volumes: [pgdata:/var/lib/postgresql/data]
+    ports: ["127.0.0.1:55432:5432"]
+  redis:
+    image: redis:7.4.5-bookworm
+    command: [redis-server, --appendonly, "yes", --maxmemory-policy, noeviction]
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 2s
+      timeout: 2s
+      retries: 30
+    volumes: [redisdata:/data]
+    ports: ["127.0.0.1:56379:6379"]
+  migrate:
+    build: .
+    command: [node, src/migrate.mjs]
+    environment: &app-env
+      MODE: production
+      DATABASE_URL: postgres://nodebook:local-only-change-me@postgres:5432/nodebook
+      REDIS_URL: redis://redis:6379
+      UPLOAD_DIR: /app/var/uploads
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_healthy}
+  api:
+    build: .
+    init: true
+    environment: *app-env
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    ports: ["127.0.0.1:3000:3000"]
+    volumes: [uploads:/app/var/uploads]
+    stop_grace_period: 15s
+  worker:
+    build: .
+    init: true
+    command: [node, src/worker.mjs]
+    environment: *app-env
+    depends_on:
+      migrate: {condition: service_completed_successfully}
+    volumes: [uploads:/app/var/uploads]
+    stop_grace_period: 15s
+volumes:
+  pgdata:
+  redisdata:
+  uploads:
