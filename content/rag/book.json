@@ -1,0 +1,350 @@
+{
+  "id": "rag",
+  "title": "RAG 완전 정복",
+  "description": "문서 수집·파싱·청킹·임베딩·하이브리드 검색·리랭킹부터 근거 기반 생성·인용·평가·보안·운영까지. 9부 40장과 Python 실습으로 검색 품질을 측정하고 문서 지식 서비스를 완성하는 한국어 기술서.",
+  "status": "draft",
+  "tags": [
+    "RAG",
+    "정보 검색",
+    "LLM",
+    "Python",
+    "평가",
+    "한국어"
+  ],
+  "provenance": {
+    "generator": "Codex — 승인 목차로 대화에서 직접 집필",
+    "model": null,
+    "created": "2026-10-14",
+    "updated": "2026-10-14",
+    "source": "승인 제목·설명·9부 40장 목차와 작성 지시는 generation-input.json에 보존했다. 논문·공식 문서는 각 장과 appendices/references.md에 기록했다. 실제 저작 모델 ID를 확인하지 못해 null이다. 실습의 로컬 LLM을 저작 모델로 표시하지 않는다.",
+    "review": {
+      "status": "automated-checked",
+      "scope": [
+        "Windows / Python 3.12.12: unittest 35개 통과, 실패·skip 0",
+        "실제 localhost Uvicorn 서버의 인증·검색·질문·관리자 갱신·삭제·거절·SSE 확인",
+        "실제 FastEmbed 다국어 ONNX embedding으로 dev/test 각 4개와 BM25/dense/hybrid 비교",
+        "실제 다국어 리랭커 한국어 1질문 및 embedding+reranker+Ollama qwen3.5:4b 생성·인용 smoke",
+        "LangChain·LlamaIndex retriever 어댑터, HTML·생성한 PDF 텍스트 추출 검사",
+        "Python 소스·본문 블록 문법, 로컬 링크·메타데이터·ZIP 검사"
+      ],
+      "notVerified": [
+        "독립 사람·전문가 전체 원고 검수와 광범위한 LLM 정답·보안 품질 평가",
+        "OCR·pgvector ANN·대규모 검색/동시 부하·실제 산업 데이터",
+        "자동 HyDE/Multi-hop/대화 메모리·전체 Agentic/GraphRAG·멀티모달 추론·파인튜닝",
+        "대규모 LLM-as-judge·독립 사람 평가 라벨링",
+        "브라우저 시각 QA·운영 인증·TLS·컨테이너/클라우드 배포·장애/백업 복원"
+      ],
+      "verification": "appendices/verification"
+    }
+  },
+  "chapters": [
+    {
+      "number": 1,
+      "title": "RAG는 무엇이고 언제 필요한가",
+      "href": "01-why-rag/chapter",
+      "part": 1
+    },
+    {
+      "number": 2,
+      "title": "RAG에 필요한 LLM과 임베딩 기초",
+      "href": "02-llm-embedding/chapter",
+      "part": 1
+    },
+    {
+      "number": 3,
+      "title": "가장 작은 RAG 파이프라인 만들기",
+      "href": "03-minimal-pipeline/chapter",
+      "part": 1
+    },
+    {
+      "number": 4,
+      "title": "문제 정의와 기준선 세우기",
+      "href": "04-baseline/chapter",
+      "part": 1
+    },
+    {
+      "number": 5,
+      "title": "문서 수집과 데이터 출처 관리",
+      "href": "05-ingestion/chapter",
+      "part": 2
+    },
+    {
+      "number": 6,
+      "title": "PDF·HTML·표·스캔 문서 파싱",
+      "href": "06-parsing/chapter",
+      "part": 2
+    },
+    {
+      "number": 7,
+      "title": "정규화·중복 제거·문서 버전 관리",
+      "href": "07-normalization/chapter",
+      "part": 2
+    },
+    {
+      "number": 8,
+      "title": "청킹 전략 설계와 비교",
+      "href": "08-chunking/chapter",
+      "part": 2
+    },
+    {
+      "number": 9,
+      "title": "메타데이터와 문서 식별 체계",
+      "href": "09-metadata/chapter",
+      "part": 2
+    },
+    {
+      "number": 10,
+      "title": "키워드 검색과 BM25",
+      "href": "10-bm25/chapter",
+      "part": 3
+    },
+    {
+      "number": 11,
+      "title": "임베딩과 의미 기반 검색",
+      "href": "11-dense-embeddings/chapter",
+      "part": 3
+    },
+    {
+      "number": 12,
+      "title": "벡터 인덱스의 내부 원리",
+      "href": "12-ann-index/chapter",
+      "part": 3
+    },
+    {
+      "number": 13,
+      "title": "벡터 저장소 구성과 검색 조건",
+      "href": "13-vector-store/chapter",
+      "part": 3
+    },
+    {
+      "number": 14,
+      "title": "하이브리드 검색과 순위 결합",
+      "href": "14-hybrid-rrf/chapter",
+      "part": 3
+    },
+    {
+      "number": 15,
+      "title": "질의 재작성과 검색 확장",
+      "href": "15-query-rewriting/chapter",
+      "part": 4
+    },
+    {
+      "number": 16,
+      "title": "리랭킹으로 근거 후보 정밀화하기",
+      "href": "16-reranking/chapter",
+      "part": 4
+    },
+    {
+      "number": 17,
+      "title": "문맥을 보존하는 검색 구조",
+      "href": "17-context-retrieval/chapter",
+      "part": 4
+    },
+    {
+      "number": 18,
+      "title": "질의 라우팅과 여러 데이터 소스 연결",
+      "href": "18-routing/chapter",
+      "part": 4
+    },
+    {
+      "number": 19,
+      "title": "다단계 질문과 Multi-hop Retrieval",
+      "href": "19-multi-hop/chapter",
+      "part": 4
+    },
+    {
+      "number": 20,
+      "title": "컨텍스트 구성과 토큰 예산",
+      "href": "20-context-budget/chapter",
+      "part": 5
+    },
+    {
+      "number": 21,
+      "title": "근거 중심 프롬프트와 답변 정책",
+      "href": "21-grounded-prompt/chapter",
+      "part": 5
+    },
+    {
+      "number": 22,
+      "title": "인용과 답변 검증",
+      "href": "22-citations/chapter",
+      "part": 5
+    },
+    {
+      "number": 23,
+      "title": "대화형 RAG와 메모리",
+      "href": "23-conversation/chapter",
+      "part": 5
+    },
+    {
+      "number": 24,
+      "title": "평가 데이터셋 만들기",
+      "href": "24-evaluation-data/chapter",
+      "part": 6
+    },
+    {
+      "number": 25,
+      "title": "검색 품질 평가",
+      "href": "25-retrieval-evaluation/chapter",
+      "part": 6
+    },
+    {
+      "number": 26,
+      "title": "답변과 인용 품질 평가",
+      "href": "26-answer-evaluation/chapter",
+      "part": 6
+    },
+    {
+      "number": 27,
+      "title": "LLM 평가자와 사람 평가 설계",
+      "href": "27-llm-judge/chapter",
+      "part": 6
+    },
+    {
+      "number": 28,
+      "title": "실험 설계와 실패 원인 분석",
+      "href": "28-experiments/chapter",
+      "part": 6
+    },
+    {
+      "number": 29,
+      "title": "RAG API와 사용자 인터페이스",
+      "href": "29-api-ui/chapter",
+      "part": 7
+    },
+    {
+      "number": 30,
+      "title": "문서 갱신과 인덱스 수명 관리",
+      "href": "30-index-lifecycle/chapter",
+      "part": 7
+    },
+    {
+      "number": 31,
+      "title": "접근 권한과 RAG 보안",
+      "href": "31-security/chapter",
+      "part": 7
+    },
+    {
+      "number": 32,
+      "title": "성능과 비용 최적화",
+      "href": "32-latency-cost/chapter",
+      "part": 7
+    },
+    {
+      "number": 33,
+      "title": "관측·배포·품질 모니터링",
+      "href": "33-observability-deployment/chapter",
+      "part": 7
+    },
+    {
+      "number": 34,
+      "title": "Agentic RAG",
+      "href": "34-agentic-rag/chapter",
+      "part": 8
+    },
+    {
+      "number": 35,
+      "title": "GraphRAG와 지식 그래프",
+      "href": "35-graph-rag/chapter",
+      "part": 8
+    },
+    {
+      "number": 36,
+      "title": "멀티모달 RAG",
+      "href": "36-multimodal/chapter",
+      "part": 8
+    },
+    {
+      "number": 37,
+      "title": "도메인 특화와 검색 모델 개선",
+      "href": "37-domain-adaptation/chapter",
+      "part": 8
+    },
+    {
+      "number": 38,
+      "title": "요구사항·문서·평가셋 설계",
+      "href": "38-capstone-design/chapter",
+      "part": 9
+    },
+    {
+      "number": 39,
+      "title": "수집부터 답변까지 전체 파이프라인 구현",
+      "href": "39-capstone-pipeline/chapter",
+      "part": 9
+    },
+    {
+      "number": 40,
+      "title": "품질 개선부터 배포와 운영 검증까지",
+      "href": "40-capstone-validation/chapter",
+      "part": 9
+    }
+  ],
+  "parts": [
+    {
+      "number": 1,
+      "title": "RAG의 기본 원리와 첫 번째 구현",
+      "first": 1,
+      "last": 4
+    },
+    {
+      "number": 2,
+      "title": "문서를 검색 가능한 데이터로 만들기",
+      "first": 5,
+      "last": 9
+    },
+    {
+      "number": 3,
+      "title": "검색의 기본 구조와 하이브리드 검색",
+      "first": 10,
+      "last": 14
+    },
+    {
+      "number": 4,
+      "title": "검색 품질을 높이는 심화 기법",
+      "first": 15,
+      "last": 19
+    },
+    {
+      "number": 5,
+      "title": "근거를 활용해 답변 생성하기",
+      "first": 20,
+      "last": 23
+    },
+    {
+      "number": 6,
+      "title": "RAG를 측정하고 개선하기",
+      "first": 24,
+      "last": 28
+    },
+    {
+      "number": 7,
+      "title": "서비스 구현과 운영",
+      "first": 29,
+      "last": 33
+    },
+    {
+      "number": 8,
+      "title": "고급 RAG 아키텍처",
+      "first": 34,
+      "last": 37
+    },
+    {
+      "number": 9,
+      "title": "종합 프로젝트: 근거를 제시하는 문서 지식 서비스",
+      "first": 38,
+      "last": 40
+    }
+  ],
+  "downloads": [
+    {
+      "title": "책 원고와 실행 예제 ZIP",
+      "href": "downloads/rag-book.zip",
+      "type": "zip"
+    },
+    {
+      "title": "실행 예제 ZIP",
+      "href": "downloads/rag-examples.zip",
+      "type": "zip"
+    }
+  ]
+}

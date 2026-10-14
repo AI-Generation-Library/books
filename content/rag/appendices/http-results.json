@@ -1,0 +1,11 @@
+{
+  "server": "real localhost uvicorn process",
+  "generator": "extractive-demo-not-llm",
+  "authentication": "passed",
+  "tenant_role_filter": "passed",
+  "admin_update": "passed",
+  "delete_and_refusal": "passed",
+  "sse_complete_answer": "passed",
+  "ui_http_get": "passed",
+  "browser_visual_test": false
+}

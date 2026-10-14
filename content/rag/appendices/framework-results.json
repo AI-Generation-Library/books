@@ -1,0 +1,6 @@
+{
+  "langchain_results": 5,
+  "llamaindex_results": 5,
+  "unauthorized_documents_excluded": true,
+  "scope": "retriever adapters only; no framework LLM calls"
+}

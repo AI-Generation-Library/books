@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-14",
+  "environment": {
+    "os": "Windows",
+    "python": "3.12.12"
+  },
+  "tests": {
+    "run": 35,
+    "passed": 35,
+    "failed": 0,
+    "skipped": 0
+  },
+  "python_formatting": "ruff; AST equivalence checked; tests passed after formatting",
+  "dependencyCheck": {
+    "packages": 96,
+    "compatible": true
+  },
+  "bookChecks": {
+    "python_files": 21,
+    "python_blocks": 8,
+    "markdown_files": 52,
+    "json_files": 13,
+    "local_links": 267,
+    "ui_javascript_syntax": true,
+    "errors": []
+  },
+  "officialReferences": {
+    "total": 65,
+    "http200": 62,
+    "http403AndWebPageRead": 3
+  },
+  "actualModels": {
+    "embedding": "neural-results.json",
+    "reranker": "rerank-results.json",
+    "generation": "llm-results.json"
+  },
+  "actualHTTP": "http-results.json",
+  "frameworks": "framework-results.json",
+  "humanReview": false,
+  "repositoryValidator": {
+    "books": 5,
+    "passed": true
+  }
+}

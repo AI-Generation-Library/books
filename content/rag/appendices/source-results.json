@@ -1,0 +1,392 @@
+[
+  {
+    "url": "https://arxiv.org/abs/1603.09320",
+    "status": 200,
+    "final": "https://arxiv.org/abs/1603.09320",
+    "title": "[1603.09320] Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs"
+  },
+  {
+    "url": "https://arxiv.org/abs/1809.09600",
+    "status": 200,
+    "final": "https://arxiv.org/abs/1809.09600",
+    "title": "[1809.09600] HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering"
+  },
+  {
+    "url": "https://arxiv.org/abs/1910.14424",
+    "status": 200,
+    "final": "https://arxiv.org/abs/1910.14424",
+    "title": "[1910.14424] Multi-Stage Document Ranking with BERT"
+  },
+  {
+    "url": "https://arxiv.org/abs/2004.04906",
+    "status": 200,
+    "final": "https://arxiv.org/abs/2004.04906",
+    "title": "[2004.04906] Dense Passage Retrieval for Open-Domain Question Answering"
+  },
+  {
+    "url": "https://arxiv.org/abs/2004.12832",
+    "status": 200,
+    "final": "https://arxiv.org/abs/2004.12832",
+    "title": "[2004.12832] ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT"
+  },
+  {
+    "url": "https://arxiv.org/abs/2005.11401",
+    "status": 200,
+    "final": "https://arxiv.org/abs/2005.11401",
+    "title": "[2005.11401] Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+  },
+  {
+    "url": "https://arxiv.org/abs/2210.03629",
+    "status": 200,
+    "final": "https://arxiv.org/abs/2210.03629",
+    "title": "[2210.03629] ReAct: Synergizing Reasoning and Acting in Language Models"
+  },
+  {
+    "url": "https://arxiv.org/abs/2212.10496",
+    "status": 200,
+    "final": "https://arxiv.org/abs/2212.10496",
+    "title": "[2212.10496] Precise Zero-Shot Dense Retrieval without Relevance Labels"
+  },
+  {
+    "url": "https://arxiv.org/abs/2305.14251",
+    "status": 200,
+    "final": "https://arxiv.org/abs/2305.14251",
+    "title": "[2305.14251] FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation"
+  },
+  {
+    "url": "https://arxiv.org/abs/2305.14627",
+    "status": 200,
+    "final": "https://arxiv.org/abs/2305.14627",
+    "title": "[2305.14627] Enabling Large Language Models to Generate Text with Citations"
+  },
+  {
+    "url": "https://arxiv.org/abs/2306.05685",
+    "status": 200,
+    "final": "https://arxiv.org/abs/2306.05685",
+    "title": "[2306.05685] Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena"
+  },
+  {
+    "url": "https://arxiv.org/abs/2307.03172",
+    "status": 200,
+    "final": "https://arxiv.org/abs/2307.03172",
+    "title": "[2307.03172] Lost in the Middle: How Language Models Use Long Contexts"
+  },
+  {
+    "url": "https://arxiv.org/abs/2309.15217",
+    "status": 200,
+    "final": "https://arxiv.org/abs/2309.15217",
+    "title": "[2309.15217] Ragas: Automated Evaluation of Retrieval Augmented Generation"
+  },
+  {
+    "url": "https://arxiv.org/abs/2404.16130",
+    "status": 200,
+    "final": "https://arxiv.org/abs/2404.16130",
+    "title": "[2404.16130] From Local to Global: A Graph RAG Approach to Query-Focused Summarization"
+  },
+  {
+    "url": "https://arxiv.org/abs/2407.01449",
+    "status": 200,
+    "final": "https://arxiv.org/abs/2407.01449",
+    "title": "[2407.01449] ColPali: Efficient Document Retrieval with Vision Language Models"
+  },
+  {
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+    "status": 200,
+    "final": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+    "title": "Authorization - OWASP Cheat Sheet Series"
+  },
+  {
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+    "status": 200,
+    "final": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html",
+    "title": "LLM Prompt Injection Prevention - OWASP Cheat Sheet Series"
+  },
+  {
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+    "status": 200,
+    "final": "https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html",
+    "title": "SQL Injection Prevention - OWASP Cheat Sheet Series"
+  },
+  {
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html",
+    "status": 200,
+    "final": "https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html",
+    "title": "Server Side Request Forgery Prevention - OWASP Cheat Sheet Series"
+  },
+  {
+    "url": "https://developers.llamaindex.ai/python/framework/module_guides/evaluating/",
+    "status": 200,
+    "final": "https://developers.llamaindex.ai/python/framework/module_guides/evaluating/",
+    "title": "Evaluating | Developer Documentation"
+  },
+  {
+    "url": "https://developers.llamaindex.ai/python/framework/module_guides/querying/retriever/",
+    "status": 200,
+    "final": "https://developers.llamaindex.ai/python/framework/module_guides/querying/retriever/",
+    "title": "Retriever | Developer Documentation"
+  },
+  {
+    "url": "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests",
+    "status": 200,
+    "final": "https://docs.github.com/en/pull-requests/reference/pull-requests",
+    "title": "Pull requests - GitHub Docs"
+  },
+  {
+    "url": "https://docs.langchain.com/oss/python/integrations/retrievers",
+    "status": 200,
+    "final": "https://docs.langchain.com/oss/python/integrations/retrievers",
+    "title": "Retriever integrations - Docs by LangChain"
+  },
+  {
+    "url": "https://docs.langchain.com/oss/python/langchain/retrieval",
+    "status": 200,
+    "final": "https://docs.langchain.com/oss/python/deepagents/retrieval",
+    "title": "Retrieval - Docs by LangChain"
+  },
+  {
+    "url": "https://docs.ollama.com/api/chat",
+    "status": 200,
+    "final": "https://docs.ollama.com/api/chat",
+    "title": "Generate a chat message - Ollama"
+  },
+  {
+    "url": "https://docs.python.org/3/library/html.parser.html",
+    "status": 200,
+    "final": "https://docs.python.org/3/library/html.parser.html",
+    "title": "html.parser — Simple HTML and XHTML parser &#8212; Python 3.15.0 documentation"
+  },
+  {
+    "url": "https://docs.python.org/3/library/sqlite3.html",
+    "status": 200,
+    "final": "https://docs.python.org/3/library/sqlite3.html",
+    "title": "sqlite3 — DB-API 2.0 interface for SQLite databases &#8212; Python 3.15.0 documentation"
+  },
+  {
+    "url": "https://docs.python.org/3/library/unicodedata.html",
+    "status": 200,
+    "final": "https://docs.python.org/3/library/unicodedata.html",
+    "title": "unicodedata — Unicode Database &#8212; Python 3.15.0 documentation"
+  },
+  {
+    "url": "https://docs.python.org/3/library/unittest.html",
+    "status": 200,
+    "final": "https://docs.python.org/3/library/unittest.html",
+    "title": "unittest — Unit testing framework &#8212; Python 3.15.0 documentation"
+  },
+  {
+    "url": "https://docs.ragas.io/en/stable/",
+    "status": 200,
+    "final": "https://docs.ragas.io/en/stable/",
+    "title": "Ragas"
+  },
+  {
+    "url": "https://docs.ragas.io/en/stable/concepts/test_data_generation/rag/",
+    "status": 200,
+    "final": "https://docs.ragas.io/en/stable/concepts/test_data_generation/rag/",
+    "title": "Testset Generation for RAG - Ragas"
+  },
+  {
+    "url": "https://fastapi.tiangolo.com/advanced/custom-response/",
+    "status": 200,
+    "final": "https://fastapi.tiangolo.com/advanced/custom-response/",
+    "title": "Custom Response - HTML, Stream, File, others - FastAPI"
+  },
+  {
+    "url": "https://fastapi.tiangolo.com/tutorial/",
+    "status": 200,
+    "final": "https://fastapi.tiangolo.com/tutorial/",
+    "title": "Tutorial - User Guide - FastAPI"
+  },
+  {
+    "url": "https://fastapi.tiangolo.com/tutorial/security/",
+    "status": 200,
+    "final": "https://fastapi.tiangolo.com/tutorial/security/",
+    "title": "Security - FastAPI"
+  },
+  {
+    "url": "https://github.com/facebookresearch/faiss/wiki/Faiss-indexes",
+    "status": 200,
+    "final": "https://github.com/facebookresearch/faiss/wiki/Faiss-indexes",
+    "title": "Faiss indexes · facebookresearch/faiss Wiki · GitHub"
+  },
+  {
+    "url": "https://github.com/pgvector/pgvector",
+    "status": 200,
+    "final": "https://github.com/pgvector/pgvector",
+    "title": "GitHub - pgvector/pgvector: Open-source vector similarity search for Postgres · GitHub"
+  },
+  {
+    "url": "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+    "status": 200,
+    "final": "https://html.spec.whatwg.org/multipage/server-sent-events.html",
+    "title": "HTML Standard"
+  },
+  {
+    "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3",
+    "status": 200,
+    "final": "https://huggingface.co/BAAI/bge-reranker-v2-m3",
+    "title": "BAAI/bge-reranker-v2-m3 · Hugging Face"
+  },
+  {
+    "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "status": 200,
+    "final": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "title": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2 · Hugging Face"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-agentic",
+    "status": 200,
+    "final": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-agentic",
+    "title": "Develop an Agentic RAG Solution on Azure - Azure Architecture Center | Microsoft Learn"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-chunking-phase",
+    "status": 200,
+    "final": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-chunking-phase",
+    "title": "Develop a RAG Solution on Azure - Chunking Phase - Azure Architecture Center | Microsoft Learn"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-information-retrieval",
+    "status": 200,
+    "final": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-information-retrieval",
+    "title": "Develop a RAG Solution on Azure - Information-Retrieval Phase - Azure Architecture Center | Microsoft Learn"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide",
+    "status": 200,
+    "final": "https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/rag/rag-solution-design-and-evaluation-guide",
+    "title": "Design and Develop a RAG Solution on Azure - Azure Architecture Center | Microsoft Learn"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/evaluation-evaluators/rag-evaluators",
+    "status": 200,
+    "final": "https://learn.microsoft.com/en-us/azure/foundry/concepts/evaluation-evaluators/rag-evaluators",
+    "title": "Retrieval-Augmented Generation (RAG) Evaluators for Generative AI - Microsoft Foundry | Microsoft Learn"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/search/hybrid-search-overview",
+    "status": 200,
+    "final": "https://learn.microsoft.com/en-us/azure/search/hybrid-search-overview",
+    "title": "Hybrid Search Overview - Azure AI Search | Microsoft Learn"
+  },
+  {
+    "url": "https://learn.microsoft.com/en-us/azure/search/hybrid-search-ranking",
+    "status": 200,
+    "final": "https://learn.microsoft.com/en-us/azure/search/hybrid-search-ranking",
+    "title": "Hybrid Search Scoring (RRF) - Azure AI Search | Microsoft Learn"
+  },
+  {
+    "url": "https://microsoft.github.io/graphrag/",
+    "status": 200,
+    "final": "https://microsoft.github.io/graphrag/",
+    "title": "Welcome - GraphRAG"
+  },
+  {
+    "url": "https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html",
+    "status": 200,
+    "final": "https://nlp.stanford.edu/IR-book/html/htmledition/evaluation-of-ranked-retrieval-results-1.html",
+    "title": "Evaluation of ranked retrieval results"
+  },
+  {
+    "url": "https://nlp.stanford.edu/IR-book/html/htmledition/okapi-bm25-a-non-binary-model-1.html",
+    "status": 200,
+    "final": "https://nlp.stanford.edu/IR-book/html/htmledition/okapi-bm25-a-non-binary-model-1.html",
+    "title": "Okapi BM25: a non-binary model"
+  },
+  {
+    "url": "https://opentelemetry.io/docs/languages/python/",
+    "status": 200,
+    "final": "https://opentelemetry.io/docs/languages/python/",
+    "title": "Python | OpenTelemetry"
+  },
+  {
+    "url": "https://pypdf.readthedocs.io/en/stable/user/extract-text.html",
+    "status": 200,
+    "final": "https://pypdf.readthedocs.io/en/stable/user/extract-text.html",
+    "title": "Extract Text from a PDF &mdash; pypdf 6.20.1 documentation"
+  },
+  {
+    "url": "https://qdrant.github.io/fastembed/",
+    "status": 200,
+    "final": "https://qdrant.github.io/fastembed/",
+    "title": "FastEmbed"
+  },
+  {
+    "url": "https://qdrant.github.io/fastembed/examples/Supported_Models/",
+    "status": 200,
+    "final": "https://qdrant.github.io/fastembed/examples/Supported_Models/",
+    "title": "Supported Models - FastEmbed"
+  },
+  {
+    "url": "https://www.cs.cmu.edu/~jgc/publication/The_Use_MMR_Diversity_Based_LTMIR_1998.pdf",
+    "status": 200,
+    "final": "https://www.cs.cmu.edu/~jgc/publication/The_Use_MMR_Diversity_Based_LTMIR_1998.pdf",
+    "title": null
+  },
+  {
+    "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis.html",
+    "status": 200,
+    "final": "https://www.elastic.co/docs/manage-data/data-store/text-analysis",
+    "title": "Text analysis | Elastic Docs"
+  },
+  {
+    "url": "https://www.postgresql.org/docs/current/ddl-rowsecurity.html",
+    "status": 200,
+    "final": "https://www.postgresql.org/docs/current/ddl-rowsecurity.html",
+    "title": "PostgreSQL: Documentation: 18: 5.9. Row Security Policies"
+  },
+  {
+    "url": "https://www.python-httpx.org/advanced/timeouts/",
+    "status": 200,
+    "final": "https://www.python-httpx.org/advanced/timeouts/",
+    "title": "Timeouts - HTTPX"
+  },
+  {
+    "url": "https://www.sbert.net/docs/cross_encoder/training_overview.html",
+    "status": 200,
+    "final": "https://www.sbert.net/docs/cross_encoder/training_overview.html",
+    "title": "Training Overview &mdash; Sentence Transformers documentation"
+  },
+  {
+    "url": "https://www.sbert.net/docs/quickstart.html",
+    "status": 200,
+    "final": "https://www.sbert.net/docs/quickstart.html",
+    "title": "Quickstart &mdash; Sentence Transformers documentation"
+  },
+  {
+    "url": "https://www.sbert.net/docs/sentence_transformer/training_overview.html",
+    "status": 200,
+    "final": "https://www.sbert.net/docs/sentence_transformer/training_overview.html",
+    "title": "Training Overview &mdash; Sentence Transformers documentation"
+  },
+  {
+    "url": "https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html",
+    "status": 403,
+    "verifiedVia": "web page read",
+    "title": "Semantic Search — Sentence Transformers documentation"
+  },
+  {
+    "url": "https://www.sqlite.org/foreignkeys.html",
+    "status": 200,
+    "final": "https://www.sqlite.org/foreignkeys.html",
+    "title": "SQLite Foreign Key Support"
+  },
+  {
+    "url": "https://www.sqlite.org/lang_transaction.html",
+    "status": 200,
+    "final": "https://www.sqlite.org/lang_transaction.html",
+    "title": "Transaction"
+  },
+  {
+    "url": "https://uvicorn.dev/deployment/",
+    "status": 403,
+    "verifiedVia": "web page read",
+    "title": "Deployment - Uvicorn"
+  },
+  {
+    "url": "https://uvicorn.dev/settings/",
+    "status": 403,
+    "verifiedVia": "web page read",
+    "title": "Settings - Uvicorn"
+  }
+]
