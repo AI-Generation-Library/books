@@ -1,0 +1,56 @@
+{
+  "model": "BAAI/bge-reranker-v2-m3-int8",
+  "ranking": [
+    {
+      "document_id": "leave",
+      "score": 1.6214059591293335
+    },
+    {
+      "document_id": "expenses",
+      "score": -9.218277931213379
+    },
+    {
+      "document_id": "remote",
+      "score": -9.821502685546875
+    },
+    {
+      "document_id": "retention",
+      "score": -9.88431453704834
+    },
+    {
+      "document_id": "security",
+      "score": -11.02860164642334
+    }
+  ],
+  "scope": "one Korean positive query; not broad reranking quality evaluation",
+  "manifest": [
+    {
+      "file": "models--onnx-community--bge-reranker-v2-m3-ONNX/files_metadata.json",
+      "sha256": "f61abe4870ac176ba2db96614d75e311db947ac6e1f9ce26c7d0fe9e649cf91d"
+    },
+    {
+      "file": "models--onnx-community--bge-reranker-v2-m3-ONNX/snapshots/6f5ff65298512715a1e669753bc754d2bc8f367b/config.json",
+      "sha256": "122e922dcfed6503c8721e6fe1daf090340c3d95ca7f3aa3a72730b321a51cfd"
+    },
+    {
+      "file": "models--onnx-community--bge-reranker-v2-m3-ONNX/snapshots/6f5ff65298512715a1e669753bc754d2bc8f367b/onnx/model_int8.onnx",
+      "sha256": "912fc1215c2dbff6499700534bd8d31253af01573861abbfc43afd1fab6cce5d"
+    },
+    {
+      "file": "models--onnx-community--bge-reranker-v2-m3-ONNX/snapshots/6f5ff65298512715a1e669753bc754d2bc8f367b/special_tokens_map.json",
+      "sha256": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835"
+    },
+    {
+      "file": "models--onnx-community--bge-reranker-v2-m3-ONNX/snapshots/6f5ff65298512715a1e669753bc754d2bc8f367b/tokenizer.json",
+      "sha256": "8bf8afbfd11306bd872018c53bfdf2e160a56f8edbcf49933324404791c148d3"
+    },
+    {
+      "file": "models--onnx-community--bge-reranker-v2-m3-ONNX/snapshots/6f5ff65298512715a1e669753bc754d2bc8f367b/tokenizer_config.json",
+      "sha256": "b87c8703482b0300d3da30e201519aa641f6a450f5eb5bf1e624afbf70c74d80"
+    },
+    {
+      "file": "models--onnx-community--bge-reranker-v2-m3-ONNX/trees/6f5ff65298512715a1e669753bc754d2bc8f367b.json",
+      "sha256": "96767f9da43515d99202c7774a82f3f745d01bfb22a4991727153a749c7786f8"
+    }
+  ]
+}

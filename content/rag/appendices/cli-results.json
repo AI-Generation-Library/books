@@ -1,0 +1,158 @@
+[
+  {
+    "command": [
+      "ragbook.cli",
+      "--db"
+    ],
+    "result": {
+      "documents": 7,
+      "chunks": 7,
+      "embedding": "character-bigram-128-v1"
+    }
+  },
+  {
+    "command": [
+      "ragbook.cli",
+      "--db"
+    ],
+    "result": {
+      "abstained": false,
+      "reason": null,
+      "generator": "extractive-demo-not-llm",
+      "answer": "가상 회사 아크미의 연차 휴가는 연간 15일입니다. 휴가 신청은 시작일 3일 전까지 포털에서 제출합니다. 이 문서는 교육용 가상 규정이며 실제 법률이나 회사 정책이 아닙니다.\n가상 프로젝트 문서의 보관 기간은 종료 후 90일입니다. 보관 기간이 끝나면 원문과 검색 인덱스에서 삭제하고 삭제 결과를 점검합니다.",
+      "claims": [
+        {
+          "text": "가상 회사 아크미의 연차 휴가는 연간 15일입니다. 휴가 신청은 시작일 3일 전까지 포털에서 제출합니다. 이 문서는 교육용 가상 규정이며 실제 법률이나 회사 정책이 아닙니다.",
+          "chunk_id": "af103bd629834b15e6823ca2",
+          "quote": "가상 회사 아크미의 연차 휴가는 연간 15일입니다. 휴가 신청은 시작일 3일 전까지 포털에서 제출합니다. 이 문서는 교육용 가상 규정이며 실제 법률이나 회사 정책이 아닙니다."
+        },
+        {
+          "text": "가상 프로젝트 문서의 보관 기간은 종료 후 90일입니다. 보관 기간이 끝나면 원문과 검색 인덱스에서 삭제하고 삭제 결과를 점검합니다.",
+          "chunk_id": "8e31e55df696bcd26c309b1a",
+          "quote": "가상 프로젝트 문서의 보관 기간은 종료 후 90일입니다. 보관 기간이 끝나면 원문과 검색 인덱스에서 삭제하고 삭제 결과를 점검합니다."
+        }
+      ],
+      "citations": [
+        {
+          "id": "af103bd629834b15e6823ca2",
+          "document_id": "leave",
+          "version": "v1",
+          "title": "가상 휴가 안내",
+          "source": "fixture://acme/leave",
+          "start": 0,
+          "end": 97
+        },
+        {
+          "id": "8e31e55df696bcd26c309b1a",
+          "document_id": "retention",
+          "version": "v1",
+          "title": "가상 문서 보관",
+          "source": "fixture://acme/retention",
+          "start": 0,
+          "end": 74
+        }
+      ],
+      "citation_check": "source-and-substring-only"
+    }
+  },
+  {
+    "command": [
+      "ragbook.cli",
+      "--db"
+    ],
+    "result": {
+      "mode": "hybrid",
+      "k": 3,
+      "retrieval_unit": "unique document, up to 20 candidate chunks",
+      "cases": [
+        {
+          "id": "q5",
+          "answerable": true,
+          "ranked_documents": [
+            "retention",
+            "leave",
+            "security"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q6",
+          "answerable": true,
+          "ranked_documents": [
+            "leave",
+            "remote",
+            "expenses"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q7",
+          "answerable": false,
+          "ranked_documents": [
+            "remote",
+            "leave",
+            "security"
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": null,
+            "reciprocal_rank": 0.0,
+            "ndcg": null
+          },
+          "abstained": true,
+          "abstention_correct": true
+        },
+        {
+          "id": "q8",
+          "answerable": false,
+          "ranked_documents": [
+            "remote",
+            "leave",
+            "expenses"
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": null,
+            "reciprocal_rank": 0.0,
+            "ndcg": null
+          },
+          "abstained": true,
+          "abstention_correct": true
+        }
+      ],
+      "mean_retrieval": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0
+      },
+      "abstention_accuracy": 1.0,
+      "scope": "synthetic author-created fixture; retrieval and refusal only; not LLM answer correctness"
+    }
+  },
+  {
+    "command": [
+      "demos.metrics"
+    ],
+    "result": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "reciprocal_rank": 0.5,
+      "ndcg": 0.6590018048024133
+    }
+  }
+]

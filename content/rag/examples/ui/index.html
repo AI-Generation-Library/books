@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RAG 문서 근거 실습</title>
+<style>body{font-family:system-ui;max-width:820px;margin:48px auto;padding:20px;line-height:1.7;background:#f5f7fa;color:#182330}input,textarea,button{font:inherit;padding:10px;box-sizing:border-box;width:100%;margin:6px 0}button{background:#184a6e;color:white;border:0;cursor:pointer}pre{white-space:pre-wrap;background:white;border:1px solid #ccd6df;padding:20px}small{display:block;color:#526275}</style>
+<h1>문서에서 근거 찾기</h1>
+<p>가상 회사 문서를 사용하는 학습용 화면입니다. 기본 모드는 원문 발췌이며 LLM 생성이 아닙니다.</p>
+<label>학습용 토큰<input id="token" type="password" autocomplete="off" placeholder="reader-local-token"></label>
+<label>질문<textarea id="question" rows="3">연차 휴가는 연간 며칠인가요?</textarea></label>
+<button id="ask">질문하기</button><small id="status" aria-live="polite"></small><pre id="answer"></pre><div id="sources"></div>
+<script>
+document.getElementById('ask').addEventListener('click',async()=>{
+ const button=document.getElementById('ask'),status=document.getElementById('status');button.disabled=true;
+ document.getElementById('answer').textContent='';document.getElementById('sources').replaceChildren();status.textContent='근거를 조회하고 있습니다.';
+ try{
+  const response=await fetch('/query',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+document.getElementById('token').value},
+   body:JSON.stringify({question:document.getElementById('question').value,mode:'hybrid',limit:5}),signal:AbortSignal.timeout(120000)});
+  if(!response.ok)throw new Error('요청 실패: '+response.status);
+  const data=await response.json();document.getElementById('answer').textContent=data.answer;
+  status.textContent='모드: '+data.generator+' / 거절: '+data.abstained+' / 인용 검사: '+data.citation_check;
+  for(const item of data.citations){const p=document.createElement('p');p.textContent=item.title+' · '+item.version+' · '+item.source+' · '+item.start+'–'+item.end;document.getElementById('sources').append(p);}
+ }catch(error){status.textContent=error.message;}finally{button.disabled=false;}
+});
+</script></html>

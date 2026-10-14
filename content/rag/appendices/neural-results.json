@@ -1,0 +1,527 @@
+{
+  "embedding_signature": "fastembed:0.9.0:sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2:aa0cb6bae80fb522d71afaa6871538139b61fdbe0a46536be7278d5bdec6a5c1",
+  "manifest": [
+    [
+      "models--Qdrant--paraphrase-multilingual-MiniLM-L12-v2-onnx-Q/files_metadata.json",
+      "e47fe8b189dade1f9e0f777fade2d0bab566278d7c7fbb6fef93b8c7f6fb6b98"
+    ],
+    [
+      "models--Qdrant--paraphrase-multilingual-MiniLM-L12-v2-onnx-Q/snapshots/faf4aa4225822f3bc6376869cb1164e8e3feedd0/config.json",
+      "c8ec081fdad2df991bf5abbf18418fec7a5cdaa421f60ffb060a30040b8c376f"
+    ],
+    [
+      "models--Qdrant--paraphrase-multilingual-MiniLM-L12-v2-onnx-Q/snapshots/faf4aa4225822f3bc6376869cb1164e8e3feedd0/model_optimized.onnx",
+      "634d0f66c29dc934c8fa72b8a4fe91dd4d420a22f1d82a241058d4316e659a99"
+    ],
+    [
+      "models--Qdrant--paraphrase-multilingual-MiniLM-L12-v2-onnx-Q/snapshots/faf4aa4225822f3bc6376869cb1164e8e3feedd0/special_tokens_map.json",
+      "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835"
+    ],
+    [
+      "models--Qdrant--paraphrase-multilingual-MiniLM-L12-v2-onnx-Q/snapshots/faf4aa4225822f3bc6376869cb1164e8e3feedd0/tokenizer.json",
+      "fa685fc160bbdbab64058d4fc91b60e62d207e8dc60b9af5c002c5ab946ded00"
+    ],
+    [
+      "models--Qdrant--paraphrase-multilingual-MiniLM-L12-v2-onnx-Q/snapshots/faf4aa4225822f3bc6376869cb1164e8e3feedd0/tokenizer_config.json",
+      "0666eebf692422757e1dddf3c9fb1ded73ba3dc726c5828671fc89e45bf3609f"
+    ],
+    [
+      "models--Qdrant--paraphrase-multilingual-MiniLM-L12-v2-onnx-Q/trees/faf4aa4225822f3bc6376869cb1164e8e3feedd0.json",
+      "292c0104b22e003fa965c11359baa62dff4ac112eebf8daab679cc9c41d33258"
+    ]
+  ],
+  "generation": "extractive demo; no LLM inference",
+  "evaluation": [
+    {
+      "mode": "bm25",
+      "k": 3,
+      "retrieval_unit": "unique document, up to 20 candidate chunks",
+      "cases": [
+        {
+          "id": "q1",
+          "answerable": true,
+          "ranked_documents": [
+            "leave"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q2",
+          "answerable": true,
+          "ranked_documents": [
+            "expenses",
+            "remote"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q3",
+          "answerable": true,
+          "ranked_documents": [
+            "remote",
+            "leave"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q4",
+          "answerable": true,
+          "ranked_documents": [
+            "security",
+            "remote",
+            "expenses"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        }
+      ],
+      "mean_retrieval": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0
+      },
+      "abstention_accuracy": 1.0,
+      "scope": "synthetic author-created fixture; retrieval and refusal only; not LLM answer correctness",
+      "split": "dev"
+    },
+    {
+      "mode": "dense",
+      "k": 3,
+      "retrieval_unit": "unique document, up to 20 candidate chunks",
+      "cases": [
+        {
+          "id": "q1",
+          "answerable": true,
+          "ranked_documents": [
+            "leave",
+            "expenses",
+            "retention"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q2",
+          "answerable": true,
+          "ranked_documents": [
+            "leave",
+            "expenses",
+            "remote"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 0.5,
+            "ndcg": 0.6309297535714574
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q3",
+          "answerable": true,
+          "ranked_documents": [
+            "leave",
+            "remote",
+            "retention"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 0.5,
+            "ndcg": 0.6309297535714574
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q4",
+          "answerable": true,
+          "ranked_documents": [
+            "security",
+            "remote",
+            "expenses"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        }
+      ],
+      "mean_retrieval": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "reciprocal_rank": 0.75,
+        "ndcg": 0.8154648767857287
+      },
+      "abstention_accuracy": 1.0,
+      "scope": "synthetic author-created fixture; retrieval and refusal only; not LLM answer correctness",
+      "split": "dev"
+    },
+    {
+      "mode": "hybrid",
+      "k": 3,
+      "retrieval_unit": "unique document, up to 20 candidate chunks",
+      "cases": [
+        {
+          "id": "q1",
+          "answerable": true,
+          "ranked_documents": [
+            "leave",
+            "expenses",
+            "retention"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q2",
+          "answerable": true,
+          "ranked_documents": [
+            "expenses",
+            "remote",
+            "leave"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q3",
+          "answerable": true,
+          "ranked_documents": [
+            "remote",
+            "leave",
+            "retention"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q4",
+          "answerable": true,
+          "ranked_documents": [
+            "security",
+            "remote",
+            "expenses"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        }
+      ],
+      "mean_retrieval": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0
+      },
+      "abstention_accuracy": 1.0,
+      "scope": "synthetic author-created fixture; retrieval and refusal only; not LLM answer correctness",
+      "split": "dev"
+    },
+    {
+      "mode": "bm25",
+      "k": 3,
+      "retrieval_unit": "unique document, up to 20 candidate chunks",
+      "cases": [
+        {
+          "id": "q5",
+          "answerable": true,
+          "ranked_documents": [
+            "retention",
+            "leave"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q6",
+          "answerable": true,
+          "ranked_documents": [
+            "leave",
+            "expenses",
+            "remote"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q7",
+          "answerable": false,
+          "ranked_documents": [],
+          "metrics": {
+            "precision": 0.0,
+            "recall": null,
+            "reciprocal_rank": 0.0,
+            "ndcg": null
+          },
+          "abstained": true,
+          "abstention_correct": true
+        },
+        {
+          "id": "q8",
+          "answerable": false,
+          "ranked_documents": [],
+          "metrics": {
+            "precision": 0.0,
+            "recall": null,
+            "reciprocal_rank": 0.0,
+            "ndcg": null
+          },
+          "abstained": true,
+          "abstention_correct": true
+        }
+      ],
+      "mean_retrieval": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0
+      },
+      "abstention_accuracy": 1.0,
+      "scope": "synthetic author-created fixture; retrieval and refusal only; not LLM answer correctness",
+      "split": "test"
+    },
+    {
+      "mode": "dense",
+      "k": 3,
+      "retrieval_unit": "unique document, up to 20 candidate chunks",
+      "cases": [
+        {
+          "id": "q5",
+          "answerable": true,
+          "ranked_documents": [
+            "retention",
+            "leave",
+            "remote"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q6",
+          "answerable": true,
+          "ranked_documents": [
+            "leave",
+            "expenses",
+            "remote"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q7",
+          "answerable": false,
+          "ranked_documents": [
+            "expenses",
+            "remote",
+            "retention"
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": null,
+            "reciprocal_rank": 0.0,
+            "ndcg": null
+          },
+          "abstained": true,
+          "abstention_correct": true
+        },
+        {
+          "id": "q8",
+          "answerable": false,
+          "ranked_documents": [
+            "remote",
+            "expenses",
+            "retention"
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": null,
+            "reciprocal_rank": 0.0,
+            "ndcg": null
+          },
+          "abstained": true,
+          "abstention_correct": true
+        }
+      ],
+      "mean_retrieval": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0
+      },
+      "abstention_accuracy": 1.0,
+      "scope": "synthetic author-created fixture; retrieval and refusal only; not LLM answer correctness",
+      "split": "test"
+    },
+    {
+      "mode": "hybrid",
+      "k": 3,
+      "retrieval_unit": "unique document, up to 20 candidate chunks",
+      "cases": [
+        {
+          "id": "q5",
+          "answerable": true,
+          "ranked_documents": [
+            "retention",
+            "leave",
+            "remote"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q6",
+          "answerable": true,
+          "ranked_documents": [
+            "leave",
+            "expenses",
+            "remote"
+          ],
+          "metrics": {
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "reciprocal_rank": 1.0,
+            "ndcg": 1.0
+          },
+          "abstained": false,
+          "abstention_correct": true
+        },
+        {
+          "id": "q7",
+          "answerable": false,
+          "ranked_documents": [
+            "expenses",
+            "remote",
+            "retention"
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": null,
+            "reciprocal_rank": 0.0,
+            "ndcg": null
+          },
+          "abstained": true,
+          "abstention_correct": true
+        },
+        {
+          "id": "q8",
+          "answerable": false,
+          "ranked_documents": [
+            "remote",
+            "expenses",
+            "retention"
+          ],
+          "metrics": {
+            "precision": 0.0,
+            "recall": null,
+            "reciprocal_rank": 0.0,
+            "ndcg": null
+          },
+          "abstained": true,
+          "abstention_correct": true
+        }
+      ],
+      "mean_retrieval": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "reciprocal_rank": 1.0,
+        "ndcg": 1.0
+      },
+      "abstention_accuracy": 1.0,
+      "scope": "synthetic author-created fixture; retrieval and refusal only; not LLM answer correctness",
+      "split": "test"
+    }
+  ]
+}

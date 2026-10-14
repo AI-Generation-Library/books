@@ -1,0 +1,70 @@
+[
+  {
+    "id": "q1",
+    "question": "연차 휴가는 연간 며칠인가요?",
+    "qrels": {
+      "leave": 2
+    },
+    "should_abstain": false,
+    "split": "dev"
+  },
+  {
+    "id": "q2",
+    "question": "출장비 정산 기한은 며칠인가요?",
+    "qrels": {
+      "expenses": 2
+    },
+    "should_abstain": false,
+    "split": "dev"
+  },
+  {
+    "id": "q3",
+    "question": "원격 근무는 주 몇 일 가능한가요?",
+    "qrels": {
+      "remote": 2
+    },
+    "should_abstain": false,
+    "split": "dev"
+  },
+  {
+    "id": "q4",
+    "question": "보안 사고 신고는 누구에게 하나요?",
+    "qrels": {
+      "security": 2
+    },
+    "should_abstain": false,
+    "split": "dev"
+  },
+  {
+    "id": "q5",
+    "question": "프로젝트 문서 보관 기간은 얼마인가요?",
+    "qrels": {
+      "retention": 2
+    },
+    "should_abstain": false,
+    "split": "test"
+  },
+  {
+    "id": "q6",
+    "question": "휴가 신청은 언제까지 제출하나요?",
+    "qrels": {
+      "leave": 2
+    },
+    "should_abstain": false,
+    "split": "test"
+  },
+  {
+    "id": "q7",
+    "question": "토성 고리 성분은?",
+    "qrels": {},
+    "should_abstain": true,
+    "split": "test"
+  },
+  {
+    "id": "q8",
+    "question": "ORION-SECRET-42",
+    "qrels": {},
+    "should_abstain": true,
+    "split": "test"
+  }
+]

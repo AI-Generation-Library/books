@@ -1,0 +1,84 @@
+[
+  {
+    "id": "leave",
+    "tenant": "acme",
+    "roles": [
+      "reader",
+      "admin"
+    ],
+    "title": "가상 휴가 안내",
+    "source": "fixture://acme/leave",
+    "version": "v1",
+    "text": "가상 회사 아크미의 연차 휴가는 연간 15일입니다. 휴가 신청은 시작일 3일 전까지 포털에서 제출합니다. 이 문서는 교육용 가상 규정이며 실제 법률이나 회사 정책이 아닙니다."
+  },
+  {
+    "id": "expenses",
+    "tenant": "acme",
+    "roles": [
+      "reader",
+      "admin"
+    ],
+    "title": "가상 출장비 안내",
+    "source": "fixture://acme/expenses",
+    "version": "v1",
+    "text": "가상 회사 아크미의 출장비 정산 기한은 귀국 후 14일입니다. 교통비와 숙박비 영수증을 첨부하고 승인자에게 제출합니다. 교육용 가상 수치입니다."
+  },
+  {
+    "id": "remote",
+    "tenant": "acme",
+    "roles": [
+      "reader",
+      "admin"
+    ],
+    "title": "가상 원격 근무",
+    "source": "fixture://acme/remote",
+    "version": "v1",
+    "text": "가상 회사 아크미의 원격 근무는 주 2일 가능합니다. 팀 일정과 보안 환경을 확인하고 신청합니다. 원격 근무 장비는 화면 잠금과 디스크 암호화를 사용합니다."
+  },
+  {
+    "id": "security",
+    "tenant": "acme",
+    "roles": [
+      "reader",
+      "admin"
+    ],
+    "title": "가상 보안 안내",
+    "source": "fixture://acme/security",
+    "version": "v1",
+    "text": "가상 보안 사고는 발견 즉시 보안 담당자에게 신고합니다. 비밀번호와 인증 토큰은 채팅이나 로그에 게시하지 않습니다. 담당자는 접근 권한과 감사 기록을 확인합니다."
+  },
+  {
+    "id": "retention",
+    "tenant": "acme",
+    "roles": [
+      "reader",
+      "admin"
+    ],
+    "title": "가상 문서 보관",
+    "source": "fixture://acme/retention",
+    "version": "v1",
+    "text": "가상 프로젝트 문서의 보관 기간은 종료 후 90일입니다. 보관 기간이 끝나면 원문과 검색 인덱스에서 삭제하고 삭제 결과를 점검합니다."
+  },
+  {
+    "id": "launch",
+    "tenant": "acme",
+    "roles": [
+      "admin"
+    ],
+    "title": "가상 비공개 계획",
+    "source": "fixture://acme/launch",
+    "version": "v1",
+    "text": "관리자 전용 가상 프로젝트 코드명은 ORION-SECRET-42입니다. 이 값은 공개 독자에게 제공하지 않습니다."
+  },
+  {
+    "id": "leave",
+    "tenant": "other",
+    "roles": [
+      "reader"
+    ],
+    "title": "다른 조직 가상 휴가",
+    "source": "fixture://other/leave",
+    "version": "v1",
+    "text": "다른 조직의 가상 휴가 수치는 99일이며 아크미 조직과 관계없습니다."
+  }
+]
