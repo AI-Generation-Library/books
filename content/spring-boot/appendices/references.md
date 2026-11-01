@@ -1,0 +1,83 @@
+---
+title: "공식 참고자료"
+enableToc: true
+---
+
+공식 Spring·Java·DB·표준 문서를 우선 사용했다. 확인 기준일은 2026-11-01이며 current/reference URL은 이후 내용이 바뀔 수 있다. 통합 예제의 재현 버전은 pom.xml에 고정했다. 문서의 보장과 이 책 자체의 설계 판단·예제를 구분한다.
+
+- [Debezium Outbox Event Router](https://debezium.io/documentation/reference/stable/transformations/outbox-event-router.html) — 관련 장: 19
+- [Hibernate ORM User Guide](https://docs.hibernate.org/orm/current/userguide/html_single/Hibernate_User_Guide.html) — 관련 장: 11
+- [Hibernate fetching](https://docs.hibernate.org/orm/current/userguide/html_single/Hibernate_User_Guide.html#fetching) — 관련 장: 16
+- [DB 초기화](https://docs.spring.io/spring-boot/how-to/data-initialization.html) — 관련 장: 10
+- [Boot Maven Plugin](https://docs.spring.io/spring-boot/maven-plugin/index.html) — 관련 장: 2
+- [Actuator endpoints](https://docs.spring.io/spring-boot/reference/actuator/endpoints.html) — 관련 장: 22
+- [Boot Metrics](https://docs.spring.io/spring-boot/reference/actuator/metrics.html) — 관련 장: 22
+- [Boot Tracing](https://docs.spring.io/spring-boot/reference/actuator/tracing.html) — 관련 장: 22
+- [자체 자동 설정 작성](https://docs.spring.io/spring-boot/reference/features/developing-auto-configuration.html) — 관련 장: 6
+- [외부 설정 문서](https://docs.spring.io/spring-boot/reference/features/external-config.html) — 관련 장: 9
+- [Boot 프로파일](https://docs.spring.io/spring-boot/reference/features/profiles.html) — 관련 장: 9
+- [Boot 가상 스레드](https://docs.spring.io/spring-boot/reference/features/spring-application.html) — 관련 장: 23
+- [Boot Dockerfiles](https://docs.spring.io/spring-boot/reference/packaging/container-images/dockerfiles.html) — 관련 장: 24
+- [Boot 애플리케이션 테스트](https://docs.spring.io/spring-boot/reference/testing/spring-boot-applications.html) — 관련 장: 21
+- [자동 설정 문서](https://docs.spring.io/spring-boot/reference/using/auto-configuration.html) — 관련 장: 1, 6
+- [Boot 빌드 시스템](https://docs.spring.io/spring-boot/reference/using/build-systems.html) — 관련 장: 1
+- [Graceful shutdown](https://docs.spring.io/spring-boot/reference/web/graceful-shutdown.html) — 관련 장: 24
+- [시스템 요구사항](https://docs.spring.io/spring-boot/system-requirements.html) — 관련 장: 2
+- [Spring Data JPA locking](https://docs.spring.io/spring-data/jpa/reference/jpa/locking.html) — 관련 장: 15
+- [Spring Data 쿼리 메서드](https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html) — 관련 장: 16
+- [Spring Data JPA 트랜잭션](https://docs.spring.io/spring-data/jpa/reference/jpa/transactions.html) — 관련 장: 11
+- [Spring Data Redis 캐시](https://docs.spring.io/spring-data/redis/reference/redis/redis-cache.html) — 관련 장: 20
+- [JdbcTransactionManager](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/jdbc/support/JdbcTransactionManager.html) — 관련 장: 14
+- [JpaTransactionManager](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/orm/jpa/JpaTransactionManager.html) — 관련 장: 14
+- [Propagation API](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/transaction/annotation/Propagation.html) — 관련 장: 14
+- [Spring AOP 개념](https://docs.spring.io/spring-framework/reference/core/aop/introduction-defn.html) — 관련 장: 5
+- [프록시 메커니즘](https://docs.spring.io/spring-framework/reference/core/aop/proxying.html) — 관련 장: 5
+- [Primary](https://docs.spring.io/spring-framework/reference/core/beans/annotation-config/autowired-primary.html) — 관련 장: 3
+- [Qualifier](https://docs.spring.io/spring-framework/reference/core/beans/annotation-config/autowired-qualifiers.html) — 관련 장: 3
+- [DI](https://docs.spring.io/spring-framework/reference/core/beans/dependencies/factory-collaborators.html) — 관련 장: 1, 3
+- [컨테이너 확장점](https://docs.spring.io/spring-framework/reference/core/beans/factory-extension.html) — 관련 장: 4
+- [빈 생명주기 콜백](https://docs.spring.io/spring-framework/reference/core/beans/factory-nature.html) — 관련 장: 4
+- [빈 스코프 문서](https://docs.spring.io/spring-framework/reference/core/beans/factory-scopes.html) — 관련 장: 4
+- [Java 기반 구성](https://docs.spring.io/spring-framework/reference/core/beans/java/basic-concepts.html) — 관련 장: 3
+- [JdbcTemplate](https://docs.spring.io/spring-framework/reference/data-access/jdbc/core.html) — 관련 장: 10
+- [Transactional 설정](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/annotations.html) — 관련 장: 13
+- [롤백 규칙](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/rolling-back.html) — 관련 장: 13
+- [선언형 트랜잭션 구현 이해](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/tx-decl-explained.html) — 관련 장: 5
+- [공식 전파 문서](https://docs.spring.io/spring-framework/reference/data-access/transaction/declarative/tx-propagation.html) — 관련 장: 14
+- [트랜잭션 이벤트 문서](https://docs.spring.io/spring-framework/reference/data-access/transaction/event.html) — 관련 장: 19
+- [프로그램 방식 트랜잭션](https://docs.spring.io/spring-framework/reference/data-access/transaction/programmatic.html) — 관련 장: 12
+- [트랜잭션 추상화](https://docs.spring.io/spring-framework/reference/data-access/transaction/strategies.html) — 관련 장: 1, 6, 12
+- [캐시 어노테이션](https://docs.spring.io/spring-framework/reference/integration/cache/annotations.html) — 관련 장: 20
+- [Spring REST Clients](https://docs.spring.io/spring-framework/reference/integration/rest-clients.html) — 관련 장: 18
+- [Task Execution and Scheduling](https://docs.spring.io/spring-framework/reference/integration/scheduling.html) — 관련 장: 19
+- [Spring Framework 개요](https://docs.spring.io/spring-framework/reference/overview.html) — 관련 장: 1
+- [테스트 트랜잭션](https://docs.spring.io/spring-framework/reference/testing/testcontext-framework/tx.html) — 관련 장: 21
+- [WebFlux 개요](https://docs.spring.io/spring-framework/reference/web/webflux/new-framework.html) — 관련 장: 23
+- [Spring 오류 응답](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-ann-rest-exceptions.html) — 관련 장: 8
+- [MVC Interceptor](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-config/interceptors.html) — 관련 장: 7
+- [MVC 검증](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-validation.html) — 관련 장: 8
+- [DispatcherServlet](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-servlet.html) — 관련 장: 7
+- [Security 구조](https://docs.spring.io/spring-security/reference/servlet/architecture.html) — 관련 장: 17
+- [메서드 보안](https://docs.spring.io/spring-security/reference/servlet/authorization/method-security.html) — 관련 장: 17
+- [CSRF](https://docs.spring.io/spring-security/reference/servlet/exploits/csrf.html) — 관련 장: 17
+- [CORS](https://docs.spring.io/spring-security/reference/servlet/integrations/cors.html) — 관련 장: 17
+- [JWT Resource Server](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/jwt.html) — 관련 장: 17
+- [HikariCP 설정](https://github.com/brettwooldridge/HikariCP#configuration-knobs-baby) — 관련 장: 10
+- [Spring Boot 4.0 Migration Guide](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-4.0-Migration-Guide) — 관련 장: 24
+- [H2 기능](https://h2database.com/html/features.html) — 관련 장: 2
+- [Jakarta Persistence 규약](https://jakarta.ee/specifications/persistence/) — 관련 장: 11
+- [Jakarta Servlet](https://jakarta.ee/specifications/servlet/6.1/) — 관련 장: 7
+- [Testcontainers Java](https://java.testcontainers.org/) — 관련 장: 21
+- [Maven 생명주기](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html) — 관련 장: 2
+- [JEP 444 Virtual Threads](https://openjdk.org/jeps/444) — 관련 장: 23
+- [JEP 491 synchronized에서의 pinning 개선](https://openjdk.org/jeps/491) — 관련 장: 23
+- [Redis eviction](https://redis.io/docs/latest/develop/reference/eviction/) — 관련 장: 20
+- [PostgreSQL 명시적 잠금](https://www.postgresql.org/docs/18/explicit-locking.html) — 관련 장: 15
+- [PostgreSQL SELECT locking](https://www.postgresql.org/docs/18/sql-select.html) — 관련 장: 19
+- [격리 수준 문서](https://www.postgresql.org/docs/18/transaction-iso.html) — 관련 장: 15
+- [PostgreSQL 트랜잭션 입문](https://www.postgresql.org/docs/18/tutorial-transactions.html) — 관련 장: 12
+- [PostgreSQL EXPLAIN](https://www.postgresql.org/docs/18/using-explain.html) — 관련 장: 16
+- [HTTP 멱등 메서드 의미](https://www.rfc-editor.org/rfc/rfc9110.html#name-idempotent-methods) — 관련 장: 18
+- [RFC 9457 Problem Details](https://www.rfc-editor.org/rfc/rfc9457.html) — 관련 장: 8
+
+[책 목차](../index.md)
