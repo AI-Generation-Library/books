@@ -1,0 +1,190 @@
+{
+  "date": "2026-11-01",
+  "environment": {
+    "os": "Windows 11",
+    "jdk": "Temurin 21.0.11",
+    "maven": "3.9.11",
+    "springBoot": "4.1.2"
+  },
+  "command": "mvn verify",
+  "tests": [
+    {
+      "suite": "com.example.reservation.DiTests",
+      "tests": 2,
+      "cases": [
+        "containerAssemblesAndReusesSingleton",
+        "constructorInjectionNeedsNoContainer"
+      ]
+    },
+    {
+      "suite": "com.example.reservation.HttpTests",
+      "tests": 6,
+      "cases": [
+        "httpSuccessAndReplay",
+        "csrfRejectedBeforeBasicAuthentication",
+        "invalidQuantityIs400",
+        "readerCannotReserve",
+        "anonymousReadIsUnauthorized",
+        "healthIsPublic"
+      ]
+    },
+    {
+      "suite": "com.example.reservation.ReservationTests",
+      "tests": 7,
+      "cases": [
+        "otherOwnerCannotReadReservation",
+        "negativeQuantityRejectedWithoutHttp",
+        "commitsReservationStockAndEvent",
+        "sameKeyDifferentPayloadIsRejected",
+        "sameKeyReplaysWithoutSecondDecrease",
+        "shortageRollsBackInsertedReservation",
+        "concurrentRequestsCannotOversell"
+      ]
+    },
+    {
+      "suite": "com.example.reservation.TransactionTests",
+      "tests": 8,
+      "cases": [
+        "checkedExceptionCommitsByDefault",
+        "externalInvocationIsTransactional",
+        "selfInvocationDoesNotStartTransaction",
+        "requiresNewCommitSurvivesOuterRollback",
+        "rollbackForIncludesCheckedException",
+        "catchingLocallyCanCommit",
+        "catchingInnerRequiredCannotUndoRollbackOnly",
+        "uncheckedExceptionRollsBack"
+      ]
+    }
+  ],
+  "totalTests": 23,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "packagedJarHttp": {
+    "passed": 10,
+    "results": [
+      {
+        "path": "/api/reservations",
+        "status": 200,
+        "code": null
+      },
+      {
+        "path": "/api/reservations",
+        "status": 200,
+        "code": null
+      },
+      {
+        "path": "/api/reservations",
+        "status": 409,
+        "code": "IDEMPOTENCY_CONFLICT"
+      },
+      {
+        "path": "/api/reservations",
+        "status": 409,
+        "code": "OUT_OF_STOCK"
+      },
+      {
+        "path": "/api/reservations",
+        "status": 400,
+        "code": "INVALID_REQUEST"
+      },
+      {
+        "path": "/api/reservations",
+        "status": 404,
+        "code": "SKU_NOT_FOUND"
+      },
+      {
+        "path": "/api/reservations/76c6bcda-05e1-47d9-afc2-42f00656c749",
+        "status": 404,
+        "code": "NOT_FOUND"
+      },
+      {
+        "path": "/api/reservations",
+        "status": 403,
+        "code": null
+      },
+      {
+        "path": "/api/reservations",
+        "status": 200,
+        "code": null
+      },
+      {
+        "path": "/api/reservations",
+        "status": 409,
+        "code": "OUT_OF_STOCK"
+      }
+    ]
+  },
+  "sourceUrls": {
+    "checked": 74,
+    "http200": 74
+  },
+  "localLinksBeforeEvidenceLink": 137,
+  "resolvedRuntimeLibraries": [
+    "logback-classic-1.5.38.jar",
+    "logback-core-1.5.38.jar",
+    "log4j-to-slf4j-2.25.5.jar",
+    "log4j-api-2.25.5.jar",
+    "jul-to-slf4j-2.0.20.jar",
+    "spring-boot-autoconfigure-4.1.2.jar",
+    "jakarta.annotation-api-3.0.0.jar",
+    "snakeyaml-2.6.jar",
+    "spring-boot-jackson-4.1.2.jar",
+    "jackson-databind-3.1.7.jar",
+    "jackson-annotations-2.21.jar",
+    "jackson-core-3.1.7.jar",
+    "spring-boot-web-server-4.1.2.jar",
+    "tomcat-embed-core-11.0.27.jar",
+    "tomcat-embed-websocket-11.0.27.jar",
+    "spring-boot-tomcat-4.1.2.jar",
+    "spring-boot-http-converter-4.1.2.jar",
+    "spring-boot-4.1.2.jar",
+    "spring-context-7.0.10.jar",
+    "spring-web-7.0.10.jar",
+    "spring-boot-webmvc-4.1.2.jar",
+    "spring-boot-servlet-4.1.2.jar",
+    "spring-webmvc-7.0.10.jar",
+    "spring-expression-7.0.10.jar",
+    "spring-boot-jdbc-4.1.2.jar",
+    "spring-boot-sql-4.1.2.jar",
+    "spring-boot-transaction-4.1.2.jar",
+    "spring-boot-persistence-4.1.2.jar",
+    "spring-tx-7.0.10.jar",
+    "spring-jdbc-7.0.10.jar",
+    "HikariCP-7.0.2.jar",
+    "slf4j-api-2.0.20.jar",
+    "spring-boot-validation-4.1.2.jar",
+    "tomcat-embed-el-11.0.27.jar",
+    "hibernate-validator-9.1.5.Final.jar",
+    "jakarta.validation-api-3.1.1.jar",
+    "jboss-logging-3.6.3.Final.jar",
+    "classmate-1.7.3.jar",
+    "spring-boot-security-4.1.2.jar",
+    "spring-security-config-7.1.2.jar",
+    "spring-security-core-7.1.2.jar",
+    "spring-security-crypto-7.1.2.jar",
+    "spring-security-web-7.1.2.jar",
+    "spring-aop-7.0.10.jar",
+    "spring-beans-7.0.10.jar",
+    "spring-boot-micrometer-metrics-4.1.2.jar",
+    "spring-boot-micrometer-observation-4.1.2.jar",
+    "spring-boot-actuator-autoconfigure-4.1.2.jar",
+    "spring-boot-actuator-4.1.2.jar",
+    "spring-boot-health-4.1.2.jar",
+    "micrometer-observation-1.17.2.jar",
+    "jspecify-1.0.1.jar",
+    "micrometer-commons-1.17.2.jar",
+    "micrometer-jakarta9-1.17.2.jar",
+    "micrometer-core-1.17.2.jar",
+    "HdrHistogram-2.2.2.jar",
+    "h2-2.4.240.jar",
+    "spring-core-7.0.10.jar",
+    "commons-logging-1.3.6.jar",
+    "spring-boot-jarmode-tools-4.1.2.jar"
+  ],
+  "limitations": [
+    "H2 only; no target PostgreSQL/MySQL execution",
+    "No JPA/Redis/broker/payment/cloud integration",
+    "No production load, backup restore, or independent human review"
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "created": "2026-11-01",
+  "authoringMethod": "Codex direct authoring",
+  "model": null,
+  "userRequest": "Spring Boot 책을 기존 FastAPI 책처럼 구체적이고 실무적으로 작성하고, DI와 트랜잭션 처리 등 핵심 개념과 주요 특징을 다룬다.",
+  "referenceBook": "content/fastapi; 특히 05-asgi-uvicorn, 08-dependencies-middleware",
+  "editorialDecisions": [
+    "POJO·IoC/DI·AOP·PSA와 Boot의 Starter·자동 설정·내장 서버·운영 지원을 구분",
+    "키워드 정의·실행 경로·코드·실패 사례·문제 해설·공식 출처를 장별 제공",
+    "재고 예약 API에 JDBC를 사용해 트랜잭션 경계를 관찰하고 JPA는 별도 심화 장에서 다룸",
+    "Java 21 / Spring Boot 4.1.2 기준, 별도 생성 API 호출 없이 직접 집필",
+    "사용자가 장 수나 목차를 별도 승인했다고 표시하지 않음"
+  ],
+  "plan": {
+    "title": "Spring Boot 완전 정복",
+    "date": "2026-11-01",
+    "baseline": "Java 21 / Spring Boot 4.1.2 / Maven 3.9.11",
+    "parts": [
+      [
+        1,
+        "Spring의 핵심 원리",
+        1,
+        6
+      ],
+      [
+        2,
+        "HTTP API와 데이터 접근",
+        7,
+        10
+      ],
+      [
+        3,
+        "영속성과 트랜잭션",
+        11,
+        16
+      ],
+      [
+        4,
+        "보안과 외부 시스템",
+        17,
+        20
+      ],
+      [
+        5,
+        "검증과 운영",
+        21,
+        24
+      ],
+      [
+        6,
+        "통합 실습과 설계",
+        25,
+        26
+      ]
+    ],
+    "chapters": [
+      [
+        "spring-and-boot",
+        "Spring과 Spring Boot, 네 가지 핵심 개념"
+      ],
+      [
+        "environment",
+        "Java·Maven·첫 애플리케이션"
+      ],
+      [
+        "dependency-injection",
+        "IoC와 DI: 객체의 조립을 설계한다"
+      ],
+      [
+        "container-lifecycle",
+        "빈 컨테이너·스코프·생명주기"
+      ],
+      [
+        "aop-proxy",
+        "AOP와 프록시의 실제 호출 경로"
+      ],
+      [
+        "psa-auto-configuration",
+        "PSA·Starter·자동 설정의 연결"
+      ],
+      [
+        "servlet-mvc",
+        "Tomcat·Servlet·DispatcherServlet"
+      ],
+      [
+        "validation-errors",
+        "DTO·검증·HTTP 오류 계약"
+      ],
+      [
+        "configuration-architecture",
+        "설정·프로파일·계층과 모듈 경계"
+      ],
+      [
+        "jdbc-pool-schema",
+        "JDBC·커넥션 풀·스키마 변경"
+      ],
+      [
+        "jpa-persistence",
+        "JPA·Hibernate·영속성 컨텍스트"
+      ],
+      [
+        "transaction-acid",
+        "ACID와 서비스 트랜잭션 경계"
+      ],
+      [
+        "transaction-rollback",
+        "롤백 규칙과 프록시 함정"
+      ],
+      [
+        "transaction-propagation",
+        "트랜잭션 전파와 자원 점유"
+      ],
+      [
+        "isolation-locking",
+        "격리 수준·락·재시도"
+      ],
+      [
+        "query-performance",
+        "N+1·페이징·인덱스·OSIV"
+      ],
+      [
+        "security",
+        "Spring Security·인증·인가"
+      ],
+      [
+        "http-resilience",
+        "외부 API·타임아웃·멱등성"
+      ],
+      [
+        "async-outbox",
+        "비동기·이벤트·Outbox"
+      ],
+      [
+        "cache",
+        "캐시 일관성과 Redis 설계"
+      ],
+      [
+        "testing",
+        "단위·통합·트랜잭션 테스트"
+      ],
+      [
+        "observability",
+        "Actuator·로그·메트릭·트레이스"
+      ],
+      [
+        "performance-concurrency",
+        "성능 측정·스레드·WebFlux"
+      ],
+      [
+        "deployment",
+        "배포·종료·장애 복구와 버전 전환"
+      ],
+      [
+        "capstone",
+        "실전 프로젝트: 재고 예약 API"
+      ],
+      [
+        "architecture-interview",
+        "설계 판단과 기술 면접"
+      ]
+    ]
+  }
+}
